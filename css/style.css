@@ -7,7 +7,6 @@
 }
 
 
-
 :root {  
     --clr-primary: #21AA58;
     --clr-secondary: #FFFFFF;
@@ -22,6 +21,7 @@
     text-decoration: none;
     
   }
+
 /* Start Header */
 @media only screen and (min-width: 425px){
 	.header{
