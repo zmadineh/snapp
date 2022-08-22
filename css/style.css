@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    direction: rtl;
+    /* direction: rtl; */
     
 }
 
@@ -13,16 +13,17 @@
     --clr-tertiary: #F1F5F7;
     --clr-tertiary: #3f3f3f;
     --ff-title: IRANSans, sans-serif;
-    background-color: #21AA58;
+    /* background-color: #21AA58; */
    
   }
+  /*
   a{
     color: #3f3f3f;
     text-decoration: none;
     
   }
 
-/* Start Header */
+
 @media only screen and (min-width: 425px){
 	.header{
         position: relative;
@@ -44,10 +45,9 @@
 }
 }
 @media only screen and (min-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
+	
 }
 @media only screen and (min-width: 1200px){
-    /*Tablets [601px -> 1200px]*/
     .header{
         position: relative;
         display: flex;
@@ -90,4 +90,4 @@
         
     }
 }
-/* End Header */
+End Header*/
