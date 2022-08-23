@@ -1,4 +1,82 @@
-.header-mobile{
-    background-color: var(--clr-primary);
+/* start header */
+
+.header{
     height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* padding-top: 15px; */
+}
+.container{
+    display: flex;
+}
+.header .container{
+    justify-content: center;
+}
+
+.header-nav,.header-icons{
+    display: none;
+}
+
+.header-logo-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.header-logo{
+    max-height: 45px;
+}
+@media only screen and (min-width: 991px){
+    .header-nav,.header-icons{
+        display: flex;
+        align-items: center;
+    }
+    .header-list{
+        display: flex;
+        list-style-type: none;
+        gap: 30px;
+    }
+    .header-list li a{
+        color: var(--clr-primary);
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+    }
+}
+
+
+
+/* start container media queries */
+
+@media only screen and (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media only screen and (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+    .header .container{
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* end container media queries */
+
+
+
+
+.banner{
+    height: 420px;
+    background-image: url("https://career.snapp.ir/img/slider/slider1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
