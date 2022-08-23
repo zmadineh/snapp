@@ -10,10 +10,10 @@
 :root {  
     --clr-primary: #21AA58;
     --clr-secondary: #FFFFFF;
-    --clr-tertiary: #F1F5F7;
+    /* --clr-tertiary: #F1F5F7; */
     --clr-tertiary: #3f3f3f;
     --ff-title: IRANSans, sans-serif;
-    background-color: #21AA58;
+    /* background-color: #21AA58; */
    
   }
   a{

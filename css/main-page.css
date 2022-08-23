@@ -1,4 +1,4 @@
-/* Start Header */
+/* Start menu */
 
 .header-container {
     width: 100%;
@@ -13,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     height: 64px;
+    width: 100%;
 }
 
 .logo {
@@ -74,11 +75,57 @@
     transform: translateY(-7px) rotate(-45deg);
 }
 
+/* end menu */
 
-/* @media only screen and (min-width: 425px){
-	
 
-} */
+/* start banner */
+
+.hero-intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-intro-image {
+    background-image: url("../src/img/intro_mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.hero-intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--clr-primary);
+    color: var( --clr-secondary);
+    font-family: var(--ff-title);
+    font-size: 20px;
+    padding: 20px;
+}
+
+.form {
+    display: none;
+}
+
+.enter-web-app {
+    display: none;
+}
+
+.download-app {
+    border-color: var(--clr-secondary);
+    background-color: var(--clr-secondary);
+    /* border-radius: 10%; */
+    border-style: solid;
+    border-width: 2px;
+    text-align: center;
+}
+
+
+/* end banner */
+
+
 
 
 @media only screen and (min-width: 600px){
@@ -87,7 +134,6 @@
         width: 70%;
     }
 }
-
 
 @media only screen and (min-width: 900px){
     /*Tablets [601px -> 1200px]*/
@@ -121,7 +167,48 @@
         display: none;
         cursor: pointer;
     }    
+    
 
+    .hero-intro {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .hero-intro-image {
+        background-image: url("../src/img/intro_desktop.jpg");
+        background-position: center;
+        object-fit: cover;
+        width: 50%
+    }
+
+    .hero-intro-text {
+        width: 50%;
+    }
+
+    .form {
+        display: flex;
+    }
+
+    .download-app {
+        display: none;
+    }
+
+    .enter-web-app {
+        display: flex;
+        border-color: var(--clr-secondary);
+        background-color: var(--clr-primary);
+        /* border-radius: 10%; */
+        border-style: solid;
+        border-width: 2px;
+        text-align: center;
+        padding: 7px;
+        width: 50%;
+    
+    }
+
+    .enter-web-app a {
+        color: var(--clr-secondary);
+    }
     
 }
 /* End Header */
