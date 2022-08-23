@@ -32,17 +32,61 @@
     .header-nav,.header-icons{
         display: flex;
         align-items: center;
+        font-family: 'Lato', sans-serif;
+        width: 40%;
     }
-    .header-list{
-        display: flex;
+    .header-logo-container{
+        width: 20%;
+        justify-content: center;
+    }
+    .header-icons{
+        justify-content: end;
+    }
+    
+    ul{
         list-style-type: none;
-        gap: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .header-list li{
+        display: inline-block;
+        margin-right: 30px;
+    }
+    
+    .header-icons ul li{
+        display: inline-block;
     }
     .header-list li a{
-        color: var(--clr-primary);
-        text-decoration: none;
+        color: #00e261;
         font-family: 'Lato', sans-serif;
         font-size: 14px;
+    }
+    .header-icons .botton{
+        padding: 10px 20px;
+        border-radius: 4px;
+        background-color: #00e261;
+        font-size: 14px;
+        font-weight: 600;
+        color:#fff ;
+        margin-right: 20px;
+    }
+    .botton i{
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    .socials li a{
+        margin: 10px;
+    }
+    .socials li a i{
+        color:#00e261 ;
+        font-size: 19px;
+    }
+    .header-list li a:hover,.socials li a i:hover{
+        color: #50BA66;
+    }
+    .botton:hover{
+        background-color: #358a46;
     }
 }
 
@@ -59,9 +103,6 @@
     .container{
         width: 970px;
     }
-    .header .container{
-        justify-content: space-around;
-    }
 }
 @media only screen and (min-width: 1200px){
     .container{
@@ -77,6 +118,13 @@
     height: 420px;
     background-image: url("https://career.snapp.ir/img/slider/slider1.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position-y: center;
     background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
 }
+.overlay {
+    background: rgba(54, 69, 108, 0.5);
+    overflow: hidden;
+    height: 100%;
+   }
