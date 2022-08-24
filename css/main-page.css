@@ -1,13 +1,13 @@
 /* Start menu */
 
-.header-container {
+.mp-header-container {
     width: 100%;
     background-color: #FFFFFF;
     overflow: hidden;
     padding: 0 16px;
 }
 
-.top-nav {
+.mp-top-nav {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -16,13 +16,13 @@
     width: 100%;
 }
 
-.logo {
+.mp-logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-menu {
+.mp-nav-menu {
     display: flex;
     color: #3f3f3f;
     gap: 10px;
@@ -40,21 +40,21 @@
     background-color: #ffffff;
 }
 
-.nav-menu.active {
+.mp-nav-menu.active {
     right: 0;
 }
 
-.nav-menu a {
+.mp-nav-menu a {
     font-size: 17px;
     white-space: nowrap;
 }
 
-.hamburger {
+.mp-hamburger {
     display: block;
     cursor: pointer;
 }
 
-.bar {
+.mp-bar {
     display: block;
     width: 20px;
     height: 2px;
@@ -63,30 +63,30 @@
     border-radius: 20%;
 }
 
-.hamburger.active .bar:nth-child(2) {
+.mp-hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active .bar:nth-child(1) {
+.mp-hamburger.active .bar:nth-child(1) {
     transform: translateY(5px) rotate(45deg);
 }
 
-.hamburger.active .bar:nth-child(3) {
+.mp-hamburger.active .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
 
 /* end menu */
 
 
-/* start banner */
+/* start hero */
 
-.hero-intro {
+.mp-hero-intro {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.hero-intro-image {
+.mp-hero-intro-image {
     background-image: url("../src/img/intro_mobile.jpg");
     background-position: center;
     background-size: cover;
@@ -94,7 +94,7 @@
     min-height: 40vh;
 }
 
-.hero-intro-text {
+.mp-hero-intro-text {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -105,15 +105,15 @@
     padding: 20px;
 }
 
-.form {
+.mp-form {
     display: none;
 }
 
-.enter-web-app {
+.mp-enter-web-app {
     display: none;
 }
 
-.download-app {
+.mp-download-app {
     border-color: var(--clr-secondary);
     background-color: var(--clr-secondary);
     /* border-radius: 10%; */
@@ -123,27 +123,26 @@
 }
 
 
-/* end banner */
-
-
+/* end hero */
 
 
 @media only screen and (min-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
-    .nav-menu {
+	/*Tablet [601px -> 990px]*/
+    .mp-nav-menu {
         width: 70%;
     }
 }
 
-@media only screen and (min-width: 900px){
-    /*Tablets [601px -> 1200px]*/
+@media only screen and (min-width: 991px){
+    /*Desktop [601px -> 991px]*/
 
-    .header-container {
+    /* start menu */
+
+    .mp-header-container {
         padding: 0 5%;  
     }
 
-    .top-nav {  
-        display: flex;
+    .mp-top-nav {  
         flex-direction: row;
         justify-content: flex-start;
         gap: 20px;
@@ -151,8 +150,7 @@
         min-height: 96px;
     }
    
-    .nav-menu {
-        display: flex;
+    .mp-nav-menu {
         flex-direction: row;
         align-items: center;
         gap: 30px;
@@ -163,37 +161,40 @@
         background-color: #ffffff00;
     }
 
-    .hamburger {
+    .mp-hamburger {
         display: none;
         cursor: pointer;
     }    
     
+    /* end menu */
 
-    .hero-intro {
+    /* start hero */
+
+    .mp-hero-intro {
         display: flex;
         flex-direction: row-reverse;
     }
     
-    .hero-intro-image {
+    .mp-hero-intro-image {
         background-image: url("../src/img/intro_desktop.jpg");
         background-position: center;
         object-fit: cover;
         width: 50%
     }
 
-    .hero-intro-text {
+    .mp-hero-intro-text {
         width: 50%;
     }
 
-    .form {
+    .mp-form {
         display: flex;
     }
 
-    .download-app {
+    .mp-download-app {
         display: none;
     }
 
-    .enter-web-app {
+    .mp-enter-web-app {
         display: flex;
         border-color: var(--clr-secondary);
         background-color: var(--clr-primary);
@@ -206,9 +207,9 @@
     
     }
 
-    .enter-web-app a {
+    .mp-enter-web-app a {
         color: var(--clr-secondary);
     }
     
+    /* end hero */
 }
-/* End Header */
