@@ -1,9 +1,36 @@
-/* Start menu */
+@font-face {
+    font-family: IRsans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../src/fonts/irsans.ttf');
+}
+
+
+* {
+    font-family: IRsans;
+}
+
+/* add to root */
+
+/* main styles ------------------------------------------------------------------- */
+
+.mp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+}
+
+
+
+/* Start menu ------------------------------------------------------------------- */
 
 .mp-header-container {
     width: 100%;
     background-color: #FFFFFF;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 0 16px;
 }
 
@@ -49,6 +76,10 @@
     white-space: nowrap;
 }
 
+.child-item.active {
+    color: var(--clr-primary);
+}
+
 .mp-hamburger {
     display: block;
     cursor: pointer;
@@ -75,10 +106,10 @@
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* end menu */
+/* end menu -------------------------------------------------------------------*/
 
 
-/* start hero */
+/* start hero ---------------------------------------------------------------- */
 
 .mp-hero-intro {
     display: flex;
@@ -91,16 +122,15 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    min-height: 40vh;
+    min-height: 48vh;
 }
 
 .mp-hero-intro-text {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: space-around;
     background-color: var(--clr-primary);
     color: var( --clr-secondary);
-    font-family: var(--ff-title);
     font-size: 20px;
     padding: 20px;
 }
@@ -116,15 +146,65 @@
 .mp-download-app {
     border-color: var(--clr-secondary);
     background-color: var(--clr-secondary);
-    /* border-radius: 10%; */
-    border-style: solid;
-    border-width: 2px;
-    text-align: center;
 }
 
+/* end hero ------------------------------------------------------------------- */
 
-/* end hero */
+/* start download app links --------------------------------------------------- */
 
+.download-app-links {
+    display: none;
+}
+
+.mp-seprator-line {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--tertiary);
+    width: 90%;
+}
+
+.mp-download-app-links {
+    display: none;
+}
+
+.mp-app-links-mobileview-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mp-open-list-button {
+    display: flex;
+    width: 30px;
+    color: #3f3f3f;
+}
+
+.mp-d-app-links-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.mp-d-app-links-title a {
+    display: flex;
+    color: var(--clr-primary);
+}
+
+.mp-d-app-links-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mp-d-app-links-list.open {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s; 
+}
+
+/* end download app links ----------------------------------------------------- */
 
 @media only screen and (min-width: 600px){
 	/*Tablet [601px -> 990px]*/
@@ -136,10 +216,12 @@
 @media only screen and (min-width: 991px){
     /*Desktop [601px -> 991px]*/
 
-    /* start menu */
+    /* start menu -------------------------------------------------------------- */
 
     .mp-header-container {
         padding: 0 5%;  
+        position: sticky;
+        top: 0; /* required */
     }
 
     .mp-top-nav {  
@@ -166,9 +248,13 @@
         cursor: pointer;
     }    
     
-    /* end menu */
+    .child-item {
+        display: none;
+    }
 
-    /* start hero */
+    /* end menu -------------------------------------------------------------- */
+
+    /* start hero ------------------------------------------------------------ */
 
     .mp-hero-intro {
         display: flex;
@@ -198,18 +284,37 @@
         display: flex;
         border-color: var(--clr-secondary);
         background-color: var(--clr-primary);
-        /* border-radius: 10%; */
-        border-style: solid;
-        border-width: 2px;
-        text-align: center;
         padding: 7px;
         width: 50%;
-    
     }
 
     .mp-enter-web-app a {
         color: var(--clr-secondary);
     }
     
-    /* end hero */
+    /* end hero ------------------------------------------------------------ */
+
+    /* start download app links -------------------------------------------- */
+
+    .mp-download-app-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 30vh;
+        margin: 0 11%;
+    }
+
+    .mp-download-app-links img {
+        width: 160px;
+    }
+
+    .mp-seprator-line {
+        display: none;
+    }
+
+    .mp-app-links-mobileview-container {
+        display: none;
+    }
+    /* end download app links ---------------------------------------------- */
 }
