@@ -1,17 +1,30 @@
+/* @font-face {
+    font-family: myFirstfont-reg;
+    src: url(../font/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: myFirstfont-bold;
+    src: url(../font/Lato-Regular.ttf);
+  }
+  @font-face {
+    font-family: myFirstfont-thin;
+    src: url(../font/Lato-Regular.ttf);
+  } */
+
 /* start header */
 
 .cp_header{
     height: 80px;
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     /* padding-top: 15px; */
 }
 .cp_container{
     display: flex;
+    flex-wrap: wrap;
 }
-.cp_header .cp_container{
+.cp_header,.cp_container{
     justify-content: center;
 }
 
@@ -84,6 +97,7 @@
     }
 }
 
+/* end header */
 
 
 /* start container media queries */
@@ -112,8 +126,8 @@
     height: 420px;
     background-image: url("https://career.snapp.ir/img/slider/slider1.jpg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size:auto 950px;
+    background-position: center ;
+    background-size:cover;
     background-attachment: fixed;
     overflow: hidden;
     margin-bottom: 100px;
@@ -125,3 +139,43 @@
    }
 
 /* end banner section */
+
+.cp_aboutUs{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin-top: 100px;
+}
+.cp_aboutUs .cp_container{
+    padding: 0 15px;
+}
+.cp_aboutUs .cp_container h5{
+    width: 100%;
+    text-align: center;
+    font-family: cpFont;
+    font-size: 35px;
+    color: #404b58;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+.cp_aboutUs .cp_container span{
+    font-family: cpFont;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+.cp_photos{
+    padding: 50px 0;
+    border-bottom:1px solid #e6f0f6 ;
+    border-top: 1px solid #e6f0f6;
+}
+.cp_photos h5{
+    width: 100%;
+    text-align: center;
+    font-family: cpFont;
+    font-size: 35px;
+    color: #404b58;
+    font-weight: 700;
+}
