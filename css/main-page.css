@@ -10,6 +10,12 @@
     font-family: IRsans;
 }
 
+a {
+    cursor: pointer;
+    color: #494949;
+    /* color: var(--tertiary1); */
+}
+
 /* add to root */
 
 /* main styles ------------------------------------------------------------------- */
@@ -24,14 +30,14 @@
 }
 
 
-
 /* Start menu ------------------------------------------------------------------- */
 
 .mp-header-container {
     width: 100%;
     background-color: #FFFFFF;
-    /* overflow: hidden; */
     padding: 0 16px;
+    position: sticky;
+    top: 0; /* required */
 }
 
 .mp-top-nav {
@@ -92,6 +98,7 @@
     margin: 4px auto;
     background-color: black;
     border-radius: 20%;
+    transition-duration: 0.2s;
 }
 
 .mp-hamburger.active .bar:nth-child(2) {
@@ -128,11 +135,19 @@
 .mp-hero-intro-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly; /* it should change */
     background-color: var(--clr-primary);
     color: var( --clr-secondary);
+    padding: 10px;
+}
+
+.mp-hero-intro-text h1{
+    font-size: 35px;
+}
+
+.mp-hero-intro-text p{
     font-size: 20px;
-    padding: 20px;
+    line-height: 30px;
 }
 
 .mp-form {
@@ -160,7 +175,7 @@
     display: flex;
     border-style: solid;
     border-width: 1px;
-    border-color: var(--tertiary);
+    border-color: #E8E8E8;
     width: 90%;
 }
 
@@ -180,37 +195,46 @@
     color: #3f3f3f;
 }
 
+.mp-d-app-links-title-container {
+    display: block;
+}
+
 .mp-d-app-links-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
     width: 90%;
-}
-
-.mp-d-app-links-title a {
-    display: flex;
     color: var(--clr-primary);
 }
 
 .mp-d-app-links-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: none;
 }
 
 .mp-d-app-links-list.open {
-    overflow: hidden;
-    height: 0;
-    transition: height 0.3s; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* transition: height 0.3s;  */
+}
+
+.mp-d-app-links-list.open a { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.mp-d-app-links-list.open img {
+    margin-left: 5px;
 }
 
 /* end download app links ----------------------------------------------------- */
 
 @media only screen and (min-width: 600px){
 	/*Tablet [601px -> 990px]*/
-    .mp-nav-menu {
-        width: 70%;
-    }
+   
 }
 
 @media only screen and (min-width: 991px){
@@ -220,8 +244,6 @@
 
     .mp-header-container {
         padding: 0 5%;  
-        position: sticky;
-        top: 0; /* required */
     }
 
     .mp-top-nav {  
@@ -270,6 +292,7 @@
 
     .mp-hero-intro-text {
         width: 50%;
+        padding-right: 80px; /* it should change */
     }
 
     .mp-form {
