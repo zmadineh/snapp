@@ -1,20 +1,20 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
 }
 :root {  
-    --clr-primary: #21AA58;
-    --clr-secondary: #FFFFFF;
-    --clr-tertiary: #F1F5F7;
-    --clr-tertiary1: #3f3f3f;
-    --clr-cp-primary : #00e261;
-    --ff-title: IRANSans, sans-serif;
-  }
+  --clr-primary: #21AA58;
+  --clr-secondary: #FFFFFF;
+  --clr-tertiary: #F1F5F7;
+  --clr-tertiary1: #3f3f3f;
+  --clr-cp-primary : #00e261;
+  --ff-title: IRANSans, sans-serif;
+}
 ul{
-    list-style-type: none;
+  list-style-type: none;
 }
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
