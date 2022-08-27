@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+  }
+  :root {  
+    --clr-primary: #21AA58;
+    --clr-secondary: #FFFFFF;
+    --clr-tertiary: #F1F5F7;
+    --clr-tertiary1: #3f3f3f;
+    --clr-cp-primary : #00e261;
+    --ff-title: IRANSans, sans-serif;
+  }
+/* blog header start  */
+@media only screen and (max-width: 48rem){
+    .bl-header{
+        display: flex;
+        position: sticky;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 1.68rem 1.06rem;
+        white-space: nowrap;
+
+    }
+    .bl-menu{
+        display: none;
+    }
+    .bl-bar-icon{
+        display: block;
+        background-color: #1363DE;
+        color: white;
+        height: 1.875rem;
+        width: 1.875rem;
+        text-align: center;
+        align-items: center;
+        border-radius: 15%;
+    }
+    .bl-bar-icon a{
+        color: white;
+    }
+    .bl-search-icon a{
+        color: #1363DE;
+    }
+    .bl-search-input input{
+        display: none;
+        border:none ;
+        border-bottom:0.125rem solid #1363DE;
+        
+    }
+    .bl-banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bl-banner a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1.25rem;
+        
+    }
+    .bl-banner img{
+        width: 90%;
+        padding-bottom: 2.5pxrem;
+    }
+    .bl-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        background-color: #F1F5F7;
+        padding: 3.4rem;
+        width: auto;
+        height: auto;
+    }
+    .bl-card{
+        
+        
+        
+        
+    }
+    .bl-card-img{
+        width: 100%;
+        position: block;
+        background-color: black;
+        opacity: .7;
+        border-bottom-right-radius: 3.125rem;
+    }
+    .bl-card-txt{
+        position: absolute;
+        top: 80%;
+        padding-right: 0.525rem;
+    }
+    .bl-card-tag{
+       
+        width: 5.625rem;
+        position: relative;
+        background-color: #1363DE;
+        color: white;
+        font-size: xx-small;
+        padding: 0.313rem;
+    }
+    .bl-card-title{
+        position:relative;
+        color: #FFFFFF;
+        
+    }
+    .bl-card-subtitle{
+        display: none;
+        color: lightgray;
+        font-size: x-small;
+        white-space: wrap;
+    }
+
+}
+@media only screen and (min-width: 48rem){
+    .bl-logo{
+        padding-right: 1.875rem;
+    }
+    .bl-header{
+        display: flex;
+        position: sticky;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 1.688rem 1.063rem;
+        white-space: nowrap;
+
+    }
+    .bl-menu ul{
+        display: none;
+        position:absolute;
+    }
+    .bl-menu :hover{
+        color: #21AA58;
+        
+    }ul{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .bl-bar-icon{
+        display: none;
+        background-color: #1363DE;
+        color: white;
+        height: 1.875rem;
+        width: 1.875rem;
+        text-align: center;
+        vertical-align: center;
+        border-radius: 15%;
+    }
+    .bl-bar-icon a{
+        color: white;
+    }
+    .bl-search-icon a{
+        color: #1363DE;
+    }
+    .bl-search-input input{
+        display: none;
+        border:none ;
+        border-bottom:0.125rem solid #1363DE;
+        
+    }
+    .bl-banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2.5rem;
+    }
+    .bl-banner a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .bl-banner img{
+        width: 75%;
+    }
+    .bl-cards{
+        display: grid;
+        width: auto;
+        height: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.25rem;
+        background-color: #F1F5F7;
+        padding: 3.75rem;
+    }
+    .bl-card{
+        width: auto;
+        height: auto;
+       
+        
+        
+        
+    }
+    .bl-card-img{
+        position: block;
+        background-color: black;
+        opacity: .7;
+        border-bottom-right-radius: 3.125rem;
+    }
+    .bl-card-txt{
+        position: absolute;
+        top: 87%;
+        padding-right: 1.25rem;
+    }
+    .bl-card-tag{
+       
+        width: 5.625rem;
+        position: relative;
+        background-color: #1363DE;
+        color: white;
+        font-size: xx-small;
+        padding: 0.313rem;
+    }
+    .bl-card-title{
+        position:relative;
+        color: #FFFFFF;
+        font-size: larger;
+    }
+    .bl-card-subtitle{
+        display: none;
+        color: lightgray;
+        font-size: x-small;
+        white-space: wrap;
+    }
+    
+    
+
+}
+/* blof header end */
+
+
+
+
+/* 
+@media only screen and (max-width: 768px){
+
+}
+@media only screen and (min-width: 768px){
+
+} */
