@@ -8,6 +8,7 @@
 
 * {
     font-family: IRsans;
+    vertical-align: baseline;
 }
 
 a {
@@ -129,25 +130,27 @@ a {
     background-position: center;
     background-size: cover;
     width: 100%;
-    min-height: 48vh;
+    min-height: 40vh;
 }
 
 .mp-hero-intro-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* it should change */
+    justify-content: space-between;
     background-color: var(--clr-primary);
     color: var( --clr-secondary);
-    padding: 10px;
+    padding: 20px 24px;
 }
 
-.mp-hero-intro-text h1{
-    font-size: 35px;
+.mp-hero-intro-text  h1{
+    font-size: 30px;
+    line-height: 48px;
 }
 
-.mp-hero-intro-text p{
-    font-size: 20px;
+.mp-hero-intro-text  p{
+    font-size: 15px;
     line-height: 30px;
+    padding: 16px 0;
 }
 
 .mp-form {
@@ -158,10 +161,19 @@ a {
     display: none;
 }
 
+.mp-hero-input {
+    display: none;
+}
+
 .mp-download-app {
     border-color: var(--clr-secondary);
     background-color: var(--clr-secondary);
+    padding: 13px 0;
+    color: black;
+    font-size: 15px;
 }
+
+
 
 /* end hero ------------------------------------------------------------------- */
 
@@ -216,7 +228,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* transition: height 0.3s;  */
+    transition: height 0.3s ease-out; 
 }
 
 .mp-d-app-links-list.open a { 
@@ -231,6 +243,52 @@ a {
 }
 
 /* end download app links ----------------------------------------------------- */
+
+/* start digital sign up section ---------------------------------------------- */
+
+.mp-digitalSignUp {
+    background-color: #F2F5F8;
+    padding: 30px 5%;
+}
+
+.mp-signUp_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.mp-signUp_container h2{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.mp-signUp_container p{
+    text-align: center;
+    padding: 16px 0 0 0;
+}
+
+.mp-signUpProc_video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mp-signUp_btn {
+    display: flex;
+    text-align: center;
+    border-color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+    padding: 12px;
+    
+    margin: 40px;
+    white-space: nowrap;
+}
+.mp-signUp_btn a {
+    color: var(--clr-secondary);
+}
+
+/* end digital sign up section ------------------------------------------------ */
 
 @media only screen and (min-width: 600px){
 	/*Tablet [601px -> 990px]*/
@@ -281,18 +339,31 @@ a {
     .mp-hero-intro {
         display: flex;
         flex-direction: row-reverse;
+        min-height: 48vh;
     }
     
     .mp-hero-intro-image {
         background-image: url("../src/img/intro_desktop.jpg");
         background-position: center;
         object-fit: cover;
-        width: 50%
+        width: 47%;
     }
 
     .mp-hero-intro-text {
-        width: 50%;
-        padding-right: 80px; /* it should change */
+        width: 53%;
+        padding: 40px 13% 40px 40px;
+    }
+
+    .mp-hero-intro-text h1{
+        font-size: 35px;
+        line-height: 52px;
+        margin-bottom: 16px;
+    }
+
+    .mp-hero-intro-text p{
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 16px;
     }
 
     .mp-form {
@@ -305,14 +376,42 @@ a {
 
     .mp-enter-web-app {
         display: flex;
+        color: var(--clr-secondary);
         border-color: var(--clr-secondary);
         background-color: var(--clr-primary);
-        padding: 7px;
+        padding: 12px;
         width: 50%;
+        white-space: nowrap;
+    }
+    
+    .mp-hero-input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
     }
 
-    .mp-enter-web-app a {
-        color: var(--clr-secondary);
+    .mp-hero-input span{
+        font-size: 10px;
+        color: red;
+        padding-top: 10px;
+    }
+
+    .mp-input-container {
+        width: 50%;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--clr-secondary);
+        background-color: var(--clr-primary);
+    }
+    
+    .mp-sendLink_btn {
+        color: var(--clr-primary);
+        background-color: var(--clr-secondary);
+        width: 20%;
+        margin-right: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+        white-space: nowrap;
     }
     
     /* end hero ------------------------------------------------------------ */
@@ -340,4 +439,9 @@ a {
         display: none;
     }
     /* end download app links ---------------------------------------------- */
+
+
+    .mp-signUpProc_video {
+        width: 80%;
+    }
 }
