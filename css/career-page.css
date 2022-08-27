@@ -179,11 +179,3 @@
     color: #404b58;
     font-weight: 700;
 }
-.cp_images{
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-}
-.cp_images img{
-    height: 488px;
-}
