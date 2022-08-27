@@ -244,6 +244,52 @@ a {
 
 /* end download app links ----------------------------------------------------- */
 
+/* start digital sign up section ---------------------------------------------- */
+
+.mp-digitalSignUp {
+    background-color: #F2F5F8;
+    padding: 30px 5%;
+}
+
+.mp-signUp_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.mp-signUp_container h2{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.mp-signUp_container p{
+    text-align: center;
+    padding: 16px 0 0 0;
+}
+
+.mp-signUpProc_video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.mp-signUp_btn {
+    display: flex;
+    text-align: center;
+    border-color: var(--clr-secondary);
+    background-color: var(--clr-primary);
+    padding: 12px;
+    
+    margin: 40px;
+    white-space: nowrap;
+}
+.mp-signUp_btn a {
+    color: var(--clr-secondary);
+}
+
+/* end digital sign up section ------------------------------------------------ */
+
 @media only screen and (min-width: 600px){
 	/*Tablet [601px -> 990px]*/
    
@@ -341,7 +387,6 @@ a {
     .mp-hero-input {
         display: flex;
         flex-direction: column;
-        position: relative;
         margin-bottom: 16px;
     }
 
@@ -394,4 +439,9 @@ a {
         display: none;
     }
     /* end download app links ---------------------------------------------- */
+
+
+    .mp-signUpProc_video {
+        width: 80%;
+    }
 }
