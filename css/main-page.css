@@ -173,8 +173,6 @@ a {
     font-size: 15px;
 }
 
-
-
 /* end hero ------------------------------------------------------------------- */
 
 /* start download app links --------------------------------------------------- */
@@ -248,7 +246,7 @@ a {
 
 .mp-digitalSignUp {
     background-color: #F2F5F8;
-    padding: 30px 5%;
+    padding: 30px 15%;
 }
 
 .mp-signUp_container {
@@ -264,7 +262,7 @@ a {
     font-size: 30px;
 }
 
-.mp-signUp_container p{
+.mp-signUp_para {
     text-align: center;
     padding: 16px 0 0 0;
 }
@@ -280,7 +278,6 @@ a {
     border-color: var(--clr-secondary);
     background-color: var(--clr-primary);
     padding: 12px;
-    
     margin: 40px;
     white-space: nowrap;
 }
@@ -288,11 +285,87 @@ a {
     color: var(--clr-secondary);
 }
 
+.mp-signUpProc_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 70px;
+}
+
+#mp-procMainContainer {
+    background-color: var(--clr-secondary); 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap;  
+    min-height: 22vh;
+    border-radius: 20px; 
+    padding: 20px 20px 20px 30px;
+}
+
+#mp-procText_h3 {
+    font-size: 15px;
+    padding: 8px 0;
+}
+
+#mp-procText_para {
+    font-size: 13px;
+    line-height: 22px;
+    padding: 5px 0;
+    color: #3f3f3f;
+    text-align: justify;
+}
+
+#mp-procImage {
+    align-self: center;
+    width: 35%;
+}
+
 /* end digital sign up section ------------------------------------------------ */
 
-@media only screen and (min-width: 600px){
+/* start super app section ---------------------------------------------------- */
+
+.mp-superApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white; 
+    
+}
+
+.mp-superApp-food {
+    padding: 30px 15%;
+}
+
+.mp-superApp-food img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.mp-superApp-intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.mp-superApp-image{
+    width: 100%;
+    
+}
+
+
+/* end super app section ------------------------------------------------------- */
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 900px){
 	/*Tablet [601px -> 990px]*/
-   
+    .mp-digitalSignUp {
+        padding: 30px 10%;
+    }
 }
 
 @media only screen and (min-width: 991px){
@@ -438,10 +511,25 @@ a {
     .mp-app-links-mobileview-container {
         display: none;
     }
-    /* end download app links ---------------------------------------------- */
+    /* end download app links --------------------------------------------------- */
 
+    /* start digital sign up section -------------------------------------------- */
 
-    .mp-signUpProc_video {
-        width: 80%;
+    .mp-signUpProc_container {
+        flex-wrap: wrap;
+        gap: 16px;    
     }
+
+    #mp-procMainContainer {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: calc(50% - 13px);
+        margin-bottom: 20px;
+    }
+
+    #mp-procText {
+        padding-right: 15px;
+    }
+
+    /* end digital sign up section ------------------------------------------------ */
 }
