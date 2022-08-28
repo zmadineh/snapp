@@ -24,6 +24,35 @@ listButton.addEventListener("click", () => {
         
 });
 
+const heroInput = document.getElementById("mp-get-number");
+const circleIcon = document.getElementById("mp-circle-icon");
+const clearIcon = document.getElementById("mp-clear-icon");
+
+heroInput.addEventListener('input', (e) => {
+        if(e.target.value != ''){
+                circleIcon.style.display = "none";
+                clearIcon.style.display = "flex";
+        }
+        else {
+                circleIcon.style.display = "flex";
+                clearIcon.style.display = "none";
+        }
+});
+
+function clearInput () {
+        heroInput.value = "";
+        circleIcon.style.display = "flex";
+        clearIcon.style.display = "none";
+}
+
+const sendLinkBtn = document.getElementById("send-link_btn");
+sendLinkBtn.addEventListener("click", () => {
+        const phoneNumber = document.getElementById("get-number");
+        const dangerText = document.getElementById("mp-wrongNumber");
+        if (phoneNumber.textContent != null){
+                dangerText.textContent = "شماره موبایل وارد شده صحیح نیست";
+        }
+});
 
 // Close the list menu if the user clicks outside of it
 // window.onclick = function(event) {

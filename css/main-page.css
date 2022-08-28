@@ -1,21 +1,17 @@
-@font-face {
-    font-family: IRsans;
-    font-style: normal;
-    font-weight: 500;
-    src: url('../src/fonts/irsans.ttf');
-}
-
-
 * {
-    font-family: IRsans;
-    vertical-align: baseline;
+    font-family: IRANSans;
 }
 
 a {
     cursor: pointer;
     color: #494949;
-    /* color: var(--tertiary1); */
 }
+
+/*
+--clr--btnLink : #00D16F
+--clr--inputClean : #A3A3A3
+--clr--lightGreen: #0BD375
+/*
 
 /* add to root */
 
@@ -30,6 +26,9 @@ a {
     border-radius: 7px;
 }
 
+.display {
+    display: none;
+}
 
 /* Start menu ------------------------------------------------------------------- */
 
@@ -39,6 +38,9 @@ a {
     padding: 0 16px;
     position: sticky;
     top: 0; /* required */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
 }
 
 .mp-top-nav {
@@ -48,6 +50,7 @@ a {
     align-items: center;
     height: 64px;
     width: 100%;
+    z-index: 100;
 }
 
 .mp-logo {
@@ -69,17 +72,20 @@ a {
     width: 100%;
     height: 100%;
     padding-right: 16px;
-    line-height: 45px;
+    line-height: 3;
     transition: 0.2s;
     background-color: #ffffff;
+    
 }
 
 .mp-nav-menu.active {
     right: 0;
+    z-index: 101;
 }
 
 .mp-nav-menu a {
-    font-size: 17px;
+    font-size: 15px;
+    font-weight: 200;   
     white-space: nowrap;
 }
 
@@ -99,19 +105,21 @@ a {
     margin: 4px auto;
     background-color: black;
     border-radius: 20%;
-    transition-duration: 0.2s;
+    
 }
 
-.mp-hamburger.active .bar:nth-child(2) {
+.mp-hamburger.active .mp-bar:nth-child(2) {
     opacity: 0;
 }
 
-.mp-hamburger.active .bar:nth-child(1) {
-    transform: translateY(5px) rotate(45deg);
+.mp-hamburger.active .mp-bar:nth-child(1) {
+    transform: translateY(5px) rotate(135deg);
+    transition-duration: 0.2s;
 }
 
-.mp-hamburger.active .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+.mp-hamburger.active .mp-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(45deg);
+    transition-duration: 0.2s;
 }
 
 /* end menu -------------------------------------------------------------------*/
@@ -186,7 +194,7 @@ a {
     border-style: solid;
     border-width: 1px;
     border-color: #E8E8E8;
-    width: 90%;
+    width: 97%;
 }
 
 .mp-download-app-links {
@@ -214,8 +222,12 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    width: 90%;
-    color: var(--clr-primary);
+    width: 95%;
+    color: #0BD375; /*var(--clr-primary);*/
+}
+
+.mp-d-app-links-title i {
+    font-size: 20px;
 }
 
 .mp-d-app-links-list {
@@ -246,7 +258,7 @@ a {
 
 .mp-digitalSignUp {
     background-color: #F2F5F8;
-    padding: 30px 15%;
+    padding: 30px 3%;
 }
 
 .mp-signUp_container {
@@ -276,7 +288,7 @@ a {
     display: flex;
     text-align: center;
     border-color: var(--clr-secondary);
-    background-color: var(--clr-primary);
+    background-color: #0BD375; /*var(--clr-primary);*/
     padding: 12px;
     margin: 40px;
     white-space: nowrap;
@@ -333,29 +345,52 @@ a {
     flex-direction: column;
     align-items: center;
     background-color: white; 
-    
 }
 
 .mp-superApp-food {
-    padding: 30px 15%;
+    padding: 50px 5% 10px 5%;
 }
 
 .mp-superApp-food img{
     width: 100%;
-    height: 100%;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .mp-superApp-intro {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 30px 0;
 }
 
-.mp-superApp-image{
+.mp-superApp-img-container {
+    width: 100%; 
+}
+
+.mp-superApp-img-container img {
     width: 100%;
-    
+    object-fit: cover;
+    max-height: 30vh;
 }
 
+.mp-superApp-text-container {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.mp-superApp-text-container h3 {
+    margin: 24px 0;
+    font-size: 22;
+    color: var(--clr-tertiary1);
+}
+
+.mp-superApp-text-container p {
+    margin: 8px 0;
+    font-size: 10;
+    font-weight: 200;
+    line-height: 1.8;
+    color: var(--clr-tertiary1);
+}
 
 /* end super app section ------------------------------------------------------- */
 
@@ -364,7 +399,7 @@ a {
 @media only screen and (min-width: 600px) and (max-width: 900px){
 	/*Tablet [601px -> 990px]*/
     .mp-digitalSignUp {
-        padding: 30px 10%;
+        padding: 30px 3%;
     }
 }
 
@@ -374,15 +409,15 @@ a {
     /* start menu -------------------------------------------------------------- */
 
     .mp-header-container {
-        padding: 0 5%;  
+        padding: 0 11%;  
     }
 
     .mp-top-nav {  
         flex-direction: row;
         justify-content: flex-start;
-        gap: 20px;
         height: 96px;
         min-height: 96px;
+        z-index: 101;
     }
    
     .mp-nav-menu {
@@ -412,23 +447,23 @@ a {
     .mp-hero-intro {
         display: flex;
         flex-direction: row-reverse;
-        min-height: 48vh;
+        min-height: 40vh;
     }
     
     .mp-hero-intro-image {
         background-image: url("../src/img/intro_desktop.jpg");
-        background-position: center;
+        background-position: right center;
         object-fit: cover;
-        width: 47%;
+        width: 49%;
     }
 
     .mp-hero-intro-text {
-        width: 53%;
-        padding: 40px 13% 40px 40px;
+        width: 51%;
+        padding: 40px 14% 40px 40px;
     }
 
     .mp-hero-intro-text h1{
-        font-size: 35px;
+        font-size: 33px;
         line-height: 52px;
         margin-bottom: 16px;
     }
@@ -445,6 +480,24 @@ a {
 
     .mp-download-app {
         display: none;
+    }
+
+    .mp-get-number_input {
+        border-style: none;
+        background-color: var(--clr-primary);
+        text-align: right;
+        font-size: 15px;
+        color: var(--clr-secondary);
+    }
+
+    ::placeholder {
+        color: #FFFFFF;
+        opacity: 0.7; /* Firefox */
+      }
+
+    .mp-get-number_input:focus{
+        outline: none;
+        opacity: 1;
     }
 
     .mp-enter-web-app {
@@ -470,15 +523,27 @@ a {
     }
 
     .mp-input-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 50%;
         border-bottom-width: 1px;
         border-bottom-style: solid;
         border-bottom-color: var(--clr-secondary);
         background-color: var(--clr-primary);
     }
-    
+
+    .mp-circleIcon {
+        font-size: 7px;
+        display: flex;
+    }
+
+    .mp-clearIcon {
+        display: none;
+    }
+
     .mp-sendLink_btn {
-        color: var(--clr-primary);
+        color: #0BD375; /*var(--clr-primary);*/
         background-color: var(--clr-secondary);
         width: 20%;
         margin-right: 10px;
@@ -515,6 +580,10 @@ a {
 
     /* start digital sign up section -------------------------------------------- */
 
+    .mp-digitalSignUp {
+        padding: 30px 15%;
+    }
+
     .mp-signUpProc_container {
         flex-wrap: wrap;
         gap: 16px;    
@@ -532,4 +601,53 @@ a {
     }
 
     /* end digital sign up section ------------------------------------------------ */
+
+
+    .mp-superApp-food {
+        padding: 50px 15% 10px 15%;
+    }
+
+    .mp-superApp-food img {
+        width: 100%;
+    }
+
+    .mp-superApp-intro {
+        flex-direction: row;
+    }
+
+    .mp-superApp-img-container {
+        width: 50%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .mp-superApp-img-container img {
+        object-fit: fill;
+        height: 100%;
+        max-height: 70vh;
+    }
+    
+    .mp-superApp-text-container {
+        width: 50%;
+        padding-left: 13%;
+    }
 }
+
+/* @media only screen and (min-width: 1300){
+    
+
+    .mp-header-container {
+        padding: 0 4%;  
+    }
+
+    .mp-hero-intro-image {
+        width: 41%;
+    }
+
+    .mp-hero-intro-text {
+        width: 59%;
+    }
+
+} */

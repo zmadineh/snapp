@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Snapp</title>
-
+    <title>سوپر اپلیکیشن اسنپ | سامانه هوشمند</title>
+    <link rel="icon" type="image/png" href="../src/img/bazaar.png"/>
     
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -79,18 +79,19 @@
         <div class="mp-hero-intro-image"></div>
         
         <div class="mp-hero-intro-text">
-            <h1>تجربه زندگی راحت تر، سریع تر و به صرفه تر با سوپر اپلیکیشن اسنپ!</h1>
+            <h1>تجربه‌ی زندگی راحت‌تر، سریع‌تر و به صرفه‌تر با سوپر‌اپلیکیشن اسنپ!</h1>
             <p>از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید بلیط سفر، مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و... را میتوانید با سوپراپلیکیشن اسنپ انجام دهید.</p>
             
             <div class="mp-hero-input">
                 <div class="mp-form">
                     <div class="mp-input-container">
-                        <div></div>
-                        <i></i>
+                        <input id="mp-get-number" placeholder="09xxxxx218" class="mp-get-number_input" value=""/>
+                        <i id="mp-circle-icon" class="fa-solid fa-circle mp-circleIcon"></i>
+                        <i id="mp-clear-icon" class="fa-solid fa-circle-xmark mp-clearIcon" style="display: none;" onclick="clearInput()"></i>
                     </div>
-                    <a class="mp-button mp-sendLink_btn">ارسال لینک</a>
+                    <a id="send-link_btn" class="mp-button mp-sendLink_btn">ارسال لینک</a>
                 </div>
-                <span id="mp-wrongNumber">شماره موبایل وارد شده صحیح نیست</span>
+                <span id="mp-wrongNumber" style="height: 15px; opacity: 0.7;"> </span>
             </div>
 
             <a class="mp-button mp-download-app">دانلود اپلیکیشن اسنپ</a>
@@ -111,18 +112,23 @@
 
     </section>
 
-    <!-- <section class="mp-superApp">
+    <section class="mp-superApp">
         
         <div class="mp-superApp-food">
             <img src="../src/img/Food.jpg" />
         </div>
 
         <div class="mp-superApp-intro">
-            <div class="mp-superApp-image">
-                <img src="../src//img/super-app.jpg" />
+            <div class="mp-superApp-img-container">
+                <img src="../src/img/super-app.jpg" />
             </div>
-            <div class="mp-superApp-text">
-
+            <div class="mp-superApp-text-container">
+                <h3>سوپر اپ اسنپ پاسخی به تمام نیازها</h3>
+                <p>اسنپ، اولین تاکسی اینترنتی ایران، بعد از پنج سال فعالیت در حوزه تردد شهری ، به یک سوپر اپ با خدمات متنوع تبدیل شد.
+                    سوپر اپ اسنپ راه حلی جدید و ساده است که با استفاده از آن تنها با یک اپلیکیشن می توانید علاوه بر درخواست خودرو، موتور
+                    وانت از خدمات متعددی از جمله سفارش غذا، پزشک و مشاور آنلاین، خرید از سوپر مارکت ها و فروشگاه ها، اسباب کشی ، خرید بلیط (هواپیما، اتوبوس و قطار)،
+                    رزرو هتل، پرداخت قبض و خرید شارژ استفاده کنید.
+                </p>
             </div>
         </div>
 
@@ -130,12 +136,12 @@
 
         </div>
 
-    </section> -->
+    </section>
 
     <section class="mp-digitalSignUp">
         <div class="mp-signUp_container">
-            <h2>در کمتر از 10 دقیقه ثبت نام کنید و به ناوگان اسنپ بپیوندید.</h2>
-            <p class="mp-signUp_para">بدون نیاز به مراجعه حضوری، از طریق این صفحه، تمام مراحل ثبت نام را اینترنتی انجام دهید</p>
+            <h2>در کمتر از 10 دقیقه ثبت‌نام کنید و به ناوگان اسنپ بپیوندید.</h2>
+            <p class="mp-signUp_para">بدون نیاز به مراجعه‌ی حضوری، از طریق این صفحه، تمام مراحل ثبت‌نام را اینترنتی انجام دهید</p>
 
             <div class="mp-button mp-signUp_btn">
                 <a class="">ثبت نام رانندگان</a>
@@ -153,8 +159,8 @@
     </section>
     
     <section>
-        <div style="background-color: white; height: 10vh; display:flex; align-items: center;">
-            <div style="display: flex; gap: 30px; width: 60%; justify-content: center;">
+        <div style="background-color: white; height: 10vh; display:flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 4%;">
+            <div style="display: flex; gap:20px; justify-content: center; white-space: nowrap; flex-wrap: wrap; line-height: 50px;">
                 <a href="#" id="mp-nav-career-item">فرصت های شغلی</a>
                 <a href="#" id="mp-nav-blog-item">بلاگ</a>
                 <a href="#" id="mp-nav-club-item">باشگاه رانندگان</a>
@@ -164,11 +170,11 @@
                 <a href="#" id="mp-nav-contact-item">تماس با ما</a>
             </div>
 
-            <div style="width: 40%;">
+            <div style="display: flex; justify-content: center;">
                 <i></i>
                 <i></i>
                 <i></i>
-                <i></i>
+                <!-- <i class="fa-brands fa-instagram"></i> -->
                 <i></i>
             </div>
         </div>
