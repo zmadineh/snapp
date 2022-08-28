@@ -75,27 +75,28 @@
         height: auto;
     }
     .bl-card{
-        
-        
-        
-        
+        width: auto;
+        height: auto;
+
     }
     .bl-card-img{
-        width: 100%;
-        position: block;
+
+        z-index: 0;
+        position: relative;
         background-color: black;
         opacity: .7;
         border-bottom-right-radius: 3.125rem;
     }
     .bl-card-txt{
+        z-index: 1;
         position: absolute;
-        top: 80%;
-        padding-right: 0.525rem;
+        padding-right: 1.25rem;
+        margin-top: -100px;
     }
     .bl-card-tag{
        
         width: 5.625rem;
-        position: relative;
+        position:relative ;
         background-color: #1363DE;
         color: white;
         font-size: xx-small;
@@ -104,7 +105,7 @@
     .bl-card-title{
         position:relative;
         color: #FFFFFF;
-        
+        font-size: larger;
     }
     .bl-card-subtitle{
         display: none;
@@ -119,28 +120,46 @@
         padding-right: 1.875rem;
     }
     .bl-header{
+        width: 100%;
+        background-color: white;
         display: flex;
-        position: sticky;
+        position: fixed;
         justify-content: flex-start;
         align-items: center;
         gap: 1.25rem;
         padding: 1.688rem 1.063rem;
         white-space: nowrap;
+        z-index: 1;
+        
 
     }
-    .bl-menu ul{
+    .bl-submenu {
         display: none;
         position:absolute;
+        background-color:white;
+        color:#3f3f3f;
+        width: 200px;
+        padding: 15px 25px;
+        font-size: small;
+        box-shadow: 1px 1px 1px 1px  #F1F5F7;
     }
-    .bl-menu :hover{
+    .bl-submenu li a{
+        border-bottom:3px #00e261;
+    }
+    .bl-menu:hover{
+        color: #21AA58;
+    }
+    
+    .bl-menu:hover .bl-submenu{
+        display: block;
         color: #21AA58;
         
-    }ul{
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        
+    }
+    .bl-menu:hover a{
+        color: #21AA58;
+    }
+    .bl-menu:hover ul li a{
+        color: #3f3f3f;
     }
     .bl-bar-icon{
         display: none;
@@ -165,12 +184,14 @@
         
     }
     .bl-banner{
+        padding-top: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding-bottom: 2.5rem;
     }
     .bl-banner a {
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -192,26 +213,26 @@
     .bl-card{
         width: auto;
         height: auto;
-       
-        
-        
-        
+
     }
     .bl-card-img{
-        position: block;
+
+        z-index: 0;
+        position: relative;
         background-color: black;
         opacity: .7;
         border-bottom-right-radius: 3.125rem;
     }
     .bl-card-txt{
+        z-index: 1;
         position: absolute;
-        top: 87%;
         padding-right: 1.25rem;
+        margin-top: -100px;
     }
     .bl-card-tag{
        
         width: 5.625rem;
-        position: relative;
+        position:relative ;
         background-color: #1363DE;
         color: white;
         font-size: xx-small;
@@ -228,6 +249,7 @@
         font-size: x-small;
         white-space: wrap;
     }
+    
     
     
 
