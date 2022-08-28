@@ -24,11 +24,12 @@ listButton.addEventListener("click", () => {
         
 });
 
-const heroInput = document.getElementById("mp-get-number");
+const inputData = document.getElementById("mp-get-number");
 const circleIcon = document.getElementById("mp-circle-icon");
 const clearIcon = document.getElementById("mp-clear-icon");
+const dangerText = document.getElementById("mp-wrongNumber");
 
-heroInput.addEventListener('input', (e) => {
+inputData.addEventListener('input', (e) => {
         if(e.target.value != ''){
                 circleIcon.style.display = "none";
                 clearIcon.style.display = "flex";
@@ -40,17 +41,21 @@ heroInput.addEventListener('input', (e) => {
 });
 
 function clearInput () {
-        heroInput.value = "";
+        inputData.value = "";
         circleIcon.style.display = "flex";
         clearIcon.style.display = "none";
+        dangerText.textContent = '';
 }
 
 const sendLinkBtn = document.getElementById("send-link_btn");
 sendLinkBtn.addEventListener("click", () => {
-        const phoneNumber = document.getElementById("get-number");
-        const dangerText = document.getElementById("mp-wrongNumber");
-        if (phoneNumber.textContent != null){
+        const phoneNumberSyntax = /^09\d{9}/; 
+        
+        if (!inputData.value.match(phoneNumberSyntax)){
                 dangerText.textContent = "شماره موبایل وارد شده صحیح نیست";
+        }
+        else {
+                dangerText.textContent = '';
         }
 });
 
