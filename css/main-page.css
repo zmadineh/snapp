@@ -1,124 +1,343 @@
-/* Start Header */
-
-.header-container {
-    position: fixed;
-    width: 100%;
-    background-color: #FFFFFF;
-    overflow: hidden;
-    padding-left: 15px;
-    padding-right: 15px;
+@font-face {
+    font-family: IRsans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../src/fonts/irsans.ttf');
 }
 
-.top-nav {
-    position: relative;
-    height: 64px;
+
+* {
+    font-family: IRsans;
+}
+
+a {
+    cursor: pointer;
+    color: #494949;
+    /* color: var(--tertiary1); */
+}
+
+/* add to root */
+
+/* main styles ------------------------------------------------------------------- */
+
+.mp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+}
+
+
+/* Start menu ------------------------------------------------------------------- */
+
+.mp-header-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 0 16px;
+    position: sticky;
+    top: 0; /* required */
+}
+
+.mp-top-nav {
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+}
+
+.mp-logo {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.nav-menu{
-    position: fixed;
+.mp-nav-menu {
     display: flex;
+    color: #3f3f3f;
+    gap: 10px;
+    position: fixed;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
     top: 64px;
     right: -100%;
+    max-width: 500px;
     width: 100%;
     height: 100%;
-    gap: 10px;
-    padding-right: 15px;
+    padding-right: 16px;
     line-height: 45px;
-    transition: 0.3s;
+    transition: 0.2s;
     background-color: #ffffff;
 }
 
-.nav-menu.active {
+.mp-nav-menu.active {
     right: 0;
 }
 
-.hamburger {
+.mp-nav-menu a {
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.child-item.active {
+    color: var(--clr-primary);
+}
+
+.mp-hamburger {
     display: block;
     cursor: pointer;
 }
 
-.bar {
+.mp-bar {
     display: block;
     width: 20px;
     height: 2px;
     margin: 4px auto;
     background-color: black;
     border-radius: 20%;
+    transition-duration: 0.2s;
 }
 
-.hamburger.active .bar:nth-child(2) {
+.mp-hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.active .bar:nth-child(1) {
+.mp-hamburger.active .bar:nth-child(1) {
     transform: translateY(5px) rotate(45deg);
 }
 
-.hamburger.active .bar:nth-child(3) {
+.mp-hamburger.active .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-
-/* @media only screen and (min-width: 425px){
-	
-
-} */
+/* end menu -------------------------------------------------------------------*/
 
 
-@media only screen and (min-width: 600px){
-	/*Big smartphones [426px -> 600px]*/
+/* start hero ---------------------------------------------------------------- */
+
+.mp-hero-intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
+.mp-hero-intro-image {
+    background-image: url("../src/img/intro_mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 48vh;
+}
 
-@media only screen and (min-width: 1200px){
-    /*Tablets [601px -> 1200px]*/
-    .top-nav {
-        position: relative;
-        display: flex;
+.mp-hero-intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* it should change */
+    background-color: var(--clr-primary);
+    color: var( --clr-secondary);
+    padding: 10px;
+}
+
+.mp-hero-intro-text h1{
+    font-size: 35px;
+}
+
+.mp-hero-intro-text p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.mp-form {
+    display: none;
+}
+
+.mp-enter-web-app {
+    display: none;
+}
+
+.mp-download-app {
+    border-color: var(--clr-secondary);
+    background-color: var(--clr-secondary);
+}
+
+/* end hero ------------------------------------------------------------------- */
+
+/* start download app links --------------------------------------------------- */
+
+.download-app-links {
+    display: none;
+}
+
+.mp-seprator-line {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E8E8E8;
+    width: 90%;
+}
+
+.mp-download-app-links {
+    display: none;
+}
+
+.mp-app-links-mobileview-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mp-open-list-button {
+    display: flex;
+    width: 30px;
+    color: #3f3f3f;
+}
+
+.mp-d-app-links-title-container {
+    display: block;
+}
+
+.mp-d-app-links-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+    color: var(--clr-primary);
+}
+
+.mp-d-app-links-list {
+    display: none;
+}
+
+.mp-d-app-links-list.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* transition: height 0.3s;  */
+}
+
+.mp-d-app-links-list.open a { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.mp-d-app-links-list.open img {
+    margin-left: 5px;
+}
+
+/* end download app links ----------------------------------------------------- */
+
+@media only screen and (min-width: 600px){
+	/*Tablet [601px -> 990px]*/
+   
+}
+
+@media only screen and (min-width: 991px){
+    /*Desktop [601px -> 991px]*/
+
+    /* start menu -------------------------------------------------------------- */
+
+    .mp-header-container {
+        padding: 0 5%;  
+    }
+
+    .mp-top-nav {  
         flex-direction: row;
-        width: 70%;
-        gap: 10px;
+        justify-content: flex-start;
+        gap: 20px;
         height: 96px;
         min-height: 96px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
    
-    .nav-menu {
-        display: flex;
+    .mp-nav-menu {
         flex-direction: row;
-        list-style: none;
+        align-items: center;
         gap: 30px;
-        color: #3f3f3f;
-        font-size:small;
-        font-weight:lighter;
+        position: relative; 
+        top: 0;
+        right: 0;
+        transition: none;
+        background-color: #ffffff00;
     }
 
-    .nav-menu-item {
-        list-style: none;
-        flex-direction: row;
-        color:#3f3f3f   
-    }
-
-    .hamburger {
+    .mp-hamburger {
         display: none;
         cursor: pointer;
     }    
-
     
+    .child-item {
+        display: none;
+    }
+
+    /* end menu -------------------------------------------------------------- */
+
+    /* start hero ------------------------------------------------------------ */
+
+    .mp-hero-intro {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .mp-hero-intro-image {
+        background-image: url("../src/img/intro_desktop.jpg");
+        background-position: center;
+        object-fit: cover;
+        width: 50%
+    }
+
+    .mp-hero-intro-text {
+        width: 50%;
+        padding-right: 80px; /* it should change */
+    }
+
+    .mp-form {
+        display: flex;
+    }
+
+    .mp-download-app {
+        display: none;
+    }
+
+    .mp-enter-web-app {
+        display: flex;
+        border-color: var(--clr-secondary);
+        background-color: var(--clr-primary);
+        padding: 7px;
+        width: 50%;
+    }
+
+    .mp-enter-web-app a {
+        color: var(--clr-secondary);
+    }
+    
+    /* end hero ------------------------------------------------------------ */
+
+    /* start download app links -------------------------------------------- */
+
+    .mp-download-app-links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 30vh;
+        margin: 0 11%;
+    }
+
+    .mp-download-app-links img {
+        width: 160px;
+    }
+
+    .mp-seprator-line {
+        display: none;
+    }
+
+    .mp-app-links-mobileview-container {
+        display: none;
+    }
+    /* end download app links ---------------------------------------------- */
 }
-/* End Header */
