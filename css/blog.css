@@ -15,27 +15,34 @@
 /* blog header start  */
 @media only screen and (max-width: 48rem){
     .bl-header{
+        font-size: normal;
+        z-index: 2;
+        width: 100%;
+        background-color: white;
         display: flex;
-        position: sticky;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: row-reverse;
+        position: fixed;
+        justify-content: space-between;
+        align-items:center ;
         gap: 1.25rem;
-        padding: 1.68rem 1.06rem;
+        padding: 1.4rem 1.063rem;
         white-space: nowrap;
+        text-decoration: none;
+        box-shadow: 0px 2px rgba(0,0,0,0.1);
+        
 
     }
+
     .bl-menu{
         display: none;
     }
     .bl-bar-icon{
         display: block;
-        background-color: #1363DE;
-        color: white;
+        color: #3f3f3f;
         height: 1.875rem;
         width: 1.875rem;
-        text-align: center;
-        align-items: center;
-        border-radius: 15%;
+        
+        
     }
     .bl-bar-icon a{
         color: white;
@@ -50,9 +57,12 @@
         
     }
     .bl-banner{
+        padding-top: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-bottom: 40px;
+        transition: ease 1s;
     }
     .bl-banner a {
         display: flex;
@@ -63,55 +73,146 @@
     }
     .bl-banner img{
         width: 90%;
-        padding-bottom: 2.5pxrem;
+        padding-bottom: 0px;
     }
+    
+    .carousel-item img{
+        border-radius: 20px;
+        
+    }
+    .carousel-item h4{
+        z-index: 1;
+        color: #3f3f3f;
+        opacity: 1;
+        font-size: normal;
+        
+    }
+    .carousel-item p{
+        z-index: 1;
+        color: #3f3f3f;
+        opacity: 1;
+    }
+    .carousel-caption{
+        z-index: 1;
+     background-color:rgba(255, 255, 255, 0.6) ;
+     border-radius: 20px;   
+        
+    }
+
     .bl-cards{
-        display: flex;
-        flex-direction: column;
+        position: relative;
+        display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 6fr;
         gap: 1.25rem;
         background-color: #F1F5F7;
         padding: 3.4rem;
         width: auto;
         height: auto;
     }
-    .bl-card{
-        width: auto;
-        height: auto;
-
-    }
     .bl-card-img{
 
         z-index: 0;
         position: relative;
         background-color: black;
-        opacity: .7;
-        border-bottom-right-radius: 3.125rem;
+        
+        border-radius: 20px;
+    }
+    .bl-card-txt:hover{
+        margin-top: -120px;
+        height: 120px;
+        transition: ease 0.5s;
+    }
+    .bl-card-txt:hover .bl-card-subtitle{
+        display: block;
     }
     .bl-card-txt{
         z-index: 1;
         position: absolute;
         padding-right: 1.25rem;
-        margin-top: -100px;
+        padding-top: 10px;
+        margin-top: -80px;
+        background-color:rgba(0,0,0,0.5);
+        width:450px;
+        height: 80px;
+        
+        padding-bottom: 38px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        
     }
     .bl-card-tag{
-       
-        width: 5.625rem;
+        z-index: 2;
+        
+       direction: rtl;
+       width:min-content;
+       white-space: nowrap;
         position:relative ;
-        background-color: #1363DE;
+        background-color: #21AA58;
         color: white;
         font-size: xx-small;
         padding: 0.313rem;
+        border-radius: 5px;
+        
     }
     .bl-card-title{
+        z-index: 2;
         position:relative;
         color: #FFFFFF;
         font-size: larger;
     }
     .bl-card-subtitle{
+        z-index: 2;
         display: none;
         color: lightgray;
         font-size: x-small;
         white-space: wrap;
+    }
+    .bl-news-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 4%;
+    }
+    .bl-news-column{
+        width: 450px;
+        background-color: #F1F5F7;
+        height: 2000px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .bl-news-header{
+        padding: 20px 20px;
+        font-size: larger;
+
+    }
+    .bl-news-box{
+        display: flex;
+        flex-direction: row;
+        width: 410px;
+        background-color: #FFFFFF;
+        margin: 1% 4%;
+        height: 70px;
+        border-radius: 15px;
+    }
+    .bl-news-box-img img{
+        width: 70px;
+        height: 70px;
+        border-radius:0px 15px 15px 0px ;
+    }
+    .bl-news-box-txt{
+        padding: 2%;
+        text-decoration: none;
+    }
+    .bl-news-box-txt a{
+        text-decoration: none;
+        color: #3f3f3f;
+    }
+    .bl-news-box-txt p{
+        font-size: x-small;
     }
 
 }
@@ -120,6 +221,8 @@
         padding-right: 1.875rem;
     }
     .bl-header{
+        font-size: small;
+        z-index: 2;
         width: 100%;
         background-color: white;
         display: flex;
@@ -129,9 +232,15 @@
         gap: 1.25rem;
         padding: 1.688rem 1.063rem;
         white-space: nowrap;
-        z-index: 1;
+        text-decoration: none;
+        box-shadow: 0px 2px rgba(0,0,0,0.1);
         
 
+    }
+    .bl-header a{
+        
+        text-decoration: none;
+        color: #3f3f3f;
     }
     .bl-submenu {
         display: none;
@@ -143,8 +252,13 @@
         font-size: small;
         box-shadow: 1px 1px 1px 1px  #F1F5F7;
     }
-    .bl-submenu li a{
+    .bl-submenu {
         border-bottom:3px #00e261;
+       
+    }
+    .bl-submenu a{
+        padding: 20px 10px;
+        
     }
     .bl-menu:hover{
         color: #21AA58;
@@ -185,11 +299,35 @@
     }
     .bl-banner{
         padding-top: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-left: 15%;
+        padding-right: 15%;
         padding-bottom: 2.5rem;
+        width: 100%;
+        
     }
+    .carousel-item img{
+        border-radius: 20px;
+        
+        
+    }
+    .carousel-item h4{
+        z-index: 1;
+        color: black;
+        opacity: 1;
+        
+    }
+    .carousel-item p{
+        z-index: 1;
+        color: black;
+        opacity: 1;
+    }
+    .carousel-caption{
+        z-index: 1;
+     background-color:rgba(255, 255, 255, 0.6) ;
+     border-radius: 20px;   
+        
+    }
+    
     .bl-banner a {
         
         display: flex;
@@ -213,6 +351,7 @@
     .bl-card{
         width: auto;
         height: auto;
+        
 
     }
     .bl-card-img{
@@ -220,37 +359,104 @@
         z-index: 0;
         position: relative;
         background-color: black;
-        opacity: .7;
-        border-bottom-right-radius: 3.125rem;
+        
+        border-radius: 20px;
+    }
+    .bl-card-txt:hover{
+        margin-top: -120px;
+        height: 120px;
+        transition: ease 0.5s;
+    }
+    .bl-card-txt:hover .bl-card-subtitle{
+        
+        display: block;
     }
     .bl-card-txt{
         z-index: 1;
         position: absolute;
         padding-right: 1.25rem;
-        margin-top: -100px;
+        padding-top: 10px;
+        margin-top: -80px;
+        background-color:rgba(0,0,0,0.5);
+        width:450px;
+        height: 80px;
+        
+        padding-bottom: 38px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        
     }
     .bl-card-tag{
-       
-        width: 5.625rem;
+        z-index: 2;
+        
+       direction: rtl;
+       width:min-content;
+       white-space: nowrap;
         position:relative ;
-        background-color: #1363DE;
+        background-color: #21AA58;
         color: white;
         font-size: xx-small;
         padding: 0.313rem;
+        border-radius: 5px;
+        
     }
     .bl-card-title{
+        z-index: 2;
         position:relative;
         color: #FFFFFF;
         font-size: larger;
     }
     .bl-card-subtitle{
+        z-index: 2;
         display: none;
         color: lightgray;
         font-size: x-small;
         white-space: wrap;
     }
-    
-    
+    .bl-news-container{
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding: 4%;
+    }
+    .bl-news-column{
+        width: 450px;
+        background-color: #F1F5F7;
+        height: 2000px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .bl-news-header{
+        padding: 20px 20px;
+        font-size: larger;
+
+    }
+    .bl-news-box{
+        display: flex;
+        flex-direction: row;
+        width: 410px;
+        background-color: #FFFFFF;
+        margin: 1% 4%;
+        height: 70px;
+        border-radius: 15px;
+    }
+    .bl-news-box-img img{
+        width: 70px;
+        height: 70px;
+        border-radius:0px 15px 15px 0px ;
+    }
+    .bl-news-box-txt{
+        padding: 2%;
+        text-decoration: none;
+    }
+    .bl-news-box-txt a{
+        text-decoration: none;
+        color: #3f3f3f;
+    }
+    .bl-news-box-txt p{
+        font-size: x-small;
+    }
     
 
 }

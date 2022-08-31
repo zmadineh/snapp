@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css" integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe" crossorigin="anonymous">
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.rtlcss.com/bootstrap/v4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-40ix5a3dj6/qaC7tfz0Yr+p9fqWLzzAXiwxVLt9dw7UjQzGYw6rWRhFAnRapuQyK" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/blog.css">
@@ -20,8 +25,8 @@
             </div>
             <a href="" ><div class="bl-menu">اخبار
                 <ul class="bl-submenu">
-                    <li><a href="">آموزشی</a></li>
-                    <li><a href="">امنیت</a><li>
+                    <li class="bl-submenu-li"><a href="">آموزشی</a></li>
+                    <li class="bl-submenu-li"><a href="">امنیت</a><li>
                 </ul>
                 
             </div></a>
@@ -60,20 +65,60 @@
             <a href=""><div class="bl-menu">ایستگاه اسباب کشی
                 
             </div></a>
-            <div class="bl-bar-icon">
-               <a href=""><i class="fa-solid fa-bars"></i></a>
-            </div>
-
-            <div class="bl-search-icon" onclick="bl_search_Function()">
-               <a href="" onclick="bl_search_Function()"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </div>
+            
             <div class="bl-search-input">
                 <input id="bl-searc-input" type="search" placeholder="جستجو...">
+             </div>
+             <div class="bl-search-icon" onclick="bl_search_Function()">
+                <a href="" onclick="bl_search_Function()"><i class="fa-solid fa-magnifying-glass"></i></a>
+             </div>
+             <div class="bl-bar-icon">
+                <a href=""><i class="fa-solid fa-bars"></i></a>
              </div>
         </div>
         <div class="bl-banner">
             
-            <a href=""><img src="https://snapp.ir/blog/wp-content/uploads/2022/07/BLOG.webp" alt=""></a>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100 mw-100" src="https://club.snapp.ir/wp-content/uploads/2022/06/20220619-appDC-780x400.jpg" alt="First slide">
+                    <div class="carousel-caption">
+                        <h4>باشگاه رانندگان اسنپ
+                        </h4>
+                        <p class="d-none d-md-block">محلی برای اطلاع از جدیدترین اخبار، آموزش‌ها، خدمات خودرویی و مسابقات و هر آنچه که کاربران راننده و موتورسوار اسنپ نیاز دارند.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 mw-100" src="https://club.snapp.ir/wp-content/uploads/2022/07/20220219-Safety-Header-780x400-1.jpg" alt="Second slide">
+                    <div class="carousel-caption ">
+                        <h4>آرامش خیال در سفر با قابلیت «امنیت سفر»
+                        </h4>
+                        <p class="d-none d-md-block">حساس امنیت و آرامش در طول سفر برای کاربران راننده ضروری است</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100 mw-100" src="https://club.snapp.ir/wp-content/uploads/2022/06/20220613-AppUpdate-H-780x400.jpg" alt="Third slide">
+                    <div class="carousel-caption ">
+                        <h4>ویژگی‌های جدید اپلیکیشن رانندگان اسنپ نسخه اندروید 4.7.0
+                        </h4>
+                        <p class="d-none d-md-block">با دانلود و نصب این نسخه می‌توانید تجربه‌ی جدیدی از فعالیت در ناوگان اسنپ داشته باشید</p>
+                      </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
         </div>
         <div class="bl-cards">
             <div class="bl-card">
@@ -99,7 +144,7 @@
                 </div>
                 <div class="bl-card-subtitle">هر اپلیکیشنی که در تلفن‌های هوشمند نصب می‌شود، برای عملکرد صحیح برخی قابلیت‌های خود نیاز به دریافت یکسری دسترسی‌ دارد؛ دسترسی‌های اپلیکیشن اسنپ...
                 </div> 
-            </div>  
+            </div> 
             </a>
             </div>
             <div class="bl-card">
@@ -149,6 +194,52 @@
                 </div> 
             </div>  
             </a>
+            </div>
+        </div>
+        <div class="bl-news-container">
+            <div class="bl-news-column">
+                <div class="bl-news-header">اخبار</div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/Blog-1-1050x445.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۸ شهریور, ۱۴۰۱
+                            </p>
+                            <h6>اغاز به کار اسنپ در مریوان</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/Blog-1-1050x445.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۱ مرداد, ۱۴۰۱
+
+                            </p>
+                            <h6>آغاز فعالیت اسنپ در بم</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                
+            </div>
+            <div class="bl-news-column">
+                <div class="bl-news-header">آموزش</div>
+                <div class="bl-news-rows">
+
+                </div>
+            </div>
+            <div class="bl-news-column">
+                <div class="bl-news-header">مسئولیت اجتماعی
+                </div>
+                <div class="bl-news-rows">
+
+                </div>
             </div>
         </div>
     </div>
