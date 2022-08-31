@@ -62,6 +62,7 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 40px;
+        transition: ease 1s;
     }
     .bl-banner a {
         display: flex;
@@ -74,6 +75,7 @@
         width: 90%;
         padding-bottom: 0px;
     }
+    
     .carousel-item img{
         border-radius: 20px;
         
@@ -119,6 +121,7 @@
     .bl-card-txt:hover{
         margin-top: -120px;
         height: 120px;
+        transition: ease 0.5s;
     }
     .bl-card-txt:hover .bl-card-subtitle{
         display: block;
@@ -185,6 +188,31 @@
         padding: 20px 20px;
         font-size: larger;
 
+    }
+    .bl-news-box{
+        display: flex;
+        flex-direction: row;
+        width: 410px;
+        background-color: #FFFFFF;
+        margin: 1% 4%;
+        height: 70px;
+        border-radius: 15px;
+    }
+    .bl-news-box-img img{
+        width: 70px;
+        height: 70px;
+        border-radius:0px 15px 15px 0px ;
+    }
+    .bl-news-box-txt{
+        padding: 2%;
+        text-decoration: none;
+    }
+    .bl-news-box-txt a{
+        text-decoration: none;
+        color: #3f3f3f;
+    }
+    .bl-news-box-txt p{
+        font-size: x-small;
     }
 
 }
@@ -275,9 +303,11 @@
         padding-right: 15%;
         padding-bottom: 2.5rem;
         width: 100%;
+        
     }
     .carousel-item img{
         border-radius: 20px;
+        
         
     }
     .carousel-item h4{
@@ -321,6 +351,7 @@
     .bl-card{
         width: auto;
         height: auto;
+        
 
     }
     .bl-card-img{
@@ -334,8 +365,10 @@
     .bl-card-txt:hover{
         margin-top: -120px;
         height: 120px;
+        transition: ease 0.5s;
     }
     .bl-card-txt:hover .bl-card-subtitle{
+        
         display: block;
     }
     .bl-card-txt{
@@ -399,7 +432,31 @@
         font-size: larger;
 
     }
-    
+    .bl-news-box{
+        display: flex;
+        flex-direction: row;
+        width: 410px;
+        background-color: #FFFFFF;
+        margin: 1% 4%;
+        height: 70px;
+        border-radius: 15px;
+    }
+    .bl-news-box-img img{
+        width: 70px;
+        height: 70px;
+        border-radius:0px 15px 15px 0px ;
+    }
+    .bl-news-box-txt{
+        padding: 2%;
+        text-decoration: none;
+    }
+    .bl-news-box-txt a{
+        text-decoration: none;
+        color: #3f3f3f;
+    }
+    .bl-news-box-txt p{
+        font-size: x-small;
+    }
     
 
 }
