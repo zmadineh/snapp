@@ -28,6 +28,7 @@
         padding: 1.4rem 1.063rem;
         white-space: nowrap;
         text-decoration: none;
+        box-shadow: 0px 2px rgba(0,0,0,0.1);
         
 
     }
@@ -37,13 +38,11 @@
     }
     .bl-bar-icon{
         display: block;
-        
         color: #3f3f3f;
         height: 1.875rem;
         width: 1.875rem;
-        text-align: center;
-        align-items: center;
-        border-radius: 15%;
+        
+        
     }
     .bl-bar-icon a{
         color: white;
@@ -117,14 +116,22 @@
         
         border-radius: 20px;
     }
+    .bl-card-txt:hover{
+        margin-top: -120px;
+        height: 120px;
+    }
+    .bl-card-txt:hover .bl-card-subtitle{
+        display: block;
+    }
     .bl-card-txt{
         z-index: 1;
         position: absolute;
         padding-right: 1.25rem;
         padding-top: 10px;
-        margin-top: -100px;
+        margin-top: -80px;
         background-color:rgba(0,0,0,0.5);
         width:450px;
+        height: 80px;
         
         padding-bottom: 38px;
         border-bottom-left-radius: 20px;
@@ -198,6 +205,7 @@
         padding: 1.688rem 1.063rem;
         white-space: nowrap;
         text-decoration: none;
+        box-shadow: 0px 2px rgba(0,0,0,0.1);
         
 
     }
@@ -323,14 +331,22 @@
         
         border-radius: 20px;
     }
+    .bl-card-txt:hover{
+        margin-top: -120px;
+        height: 120px;
+    }
+    .bl-card-txt:hover .bl-card-subtitle{
+        display: block;
+    }
     .bl-card-txt{
         z-index: 1;
         position: absolute;
         padding-right: 1.25rem;
         padding-top: 10px;
-        margin-top: -100px;
+        margin-top: -80px;
         background-color:rgba(0,0,0,0.5);
         width:450px;
+        height: 80px;
         
         padding-bottom: 38px;
         border-bottom-left-radius: 20px;
