@@ -321,10 +321,12 @@
 
 
 .cp_EndBanner .cp_container{
+    width: 100%;
+    max-width: 650px;
     display: grid;
     grid-template-columns: 1fr;
     padding: 0 40px;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .cp_EndBanner h4,.cp_EndBanner h3{
@@ -360,4 +362,25 @@
     color: #fff;
     padding-right: 10px;
     font-size: 20px;
+}
+@media only screen and (min-width: 992px){
+    .cp_EndBanner .cp_container{
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        width: 970px;
+        max-width: none;
+    }
+    #second-ul {
+        display: flex;
+        justify-content: center;
+    }
+    #third-ul{
+        display: flex;
+        justify-content: end;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .cp_EndBanner .cp_container{
+        width: 1170px;
+    }
 }
