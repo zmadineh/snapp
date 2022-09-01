@@ -42,13 +42,6 @@ cp_careers.forEach(element=>{
     cp_loc_Dep.appendChild(cp_Dep);
     cp_career_box.appendChild(cp_title);
     cp_career_box.appendChild(cp_loc_Dep);
-    // let cp_loc_Dep = document.createElement('div');
-    // let cp_loc = document.createElement('span');
-    // cp_loc.classList.add("cp_career-location");
-    // let cp_Dep = document.createElement('span');
-    // cp_Dep.classList.add("cp_career-department");
-    // cp_loc_Dep.appendChild(cp_loc,cp_Dep);
-    // cp_career_box.appendChild(cp_title,cp_loc_Dep)
     cp_careers_grid.appendChild(cp_career_box)
 })
 
