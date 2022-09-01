@@ -1,16 +1,3 @@
-/* @font-face {
-    font-family: myFirstfont-reg;
-    src: url(../font/Lato-Regular.ttf);
-}
-@font-face {
-    font-family: myFirstfont-bold;
-    src: url(../font/Lato-Regular.ttf);
-  }
-  @font-face {
-    font-family: myFirstfont-thin;
-    src: url(../font/Lato-Regular.ttf);
-  } */
-
 /* start header */
 
 .cp_header{
@@ -214,6 +201,7 @@
     color: #070808;
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
 }
 .cp_careers .cp_selected{
     color: #00e261;
@@ -240,11 +228,14 @@
 
 .cp_career-box h5{
     color: #2a333d;
+    display: block; /* for inline elements e.g. span, strong, em etc */
+    width: calc(80%);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.2;
     margin-top: 8px;
     margin-bottom: 7px;
+    overflow:hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: left;
