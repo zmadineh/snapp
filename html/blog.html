@@ -23,6 +23,7 @@
                 <a><img alt="Snapp logo" src="https://web-cdn.snapp.ir/snapp-website/icons/snappTextLogo.svg" width="90" height="32" loading="lazy"></a>
 
             </div>
+            <div class="bl-menu-father">
             <a href="" ><div class="bl-menu">اخبار
                 <ul class="bl-submenu">
                     <li class="bl-submenu-li"><a href="">آموزشی</a></li>
@@ -65,15 +66,16 @@
             <a href=""><div class="bl-menu">ایستگاه اسباب کشی
                 
             </div></a>
+        </div>
             
             <div class="bl-search-input">
-                <input id="bl-searc-input" type="search" placeholder="جستجو...">
+                <input id="bl-search-input" type="search" placeholder="جستجو...">
              </div>
              <div class="bl-search-icon" onclick="bl_search_Function()">
-                <a href="" onclick="bl_search_Function()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <i id="bl-icon" class="fa-solid fa-magnifying-glass"></i>
              </div>
-             <div class="bl-bar-icon">
-                <a href=""><i class="fa-solid fa-bars"></i></a>
+             <div class="bl-bar-icon" onclick="bl_hamburger_Function()">
+                <i class="fa-solid fa-bars"></i>
              </div>
         </div>
         <div class="bl-banner">

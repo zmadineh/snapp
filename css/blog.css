@@ -33,29 +33,75 @@
 
     }
 
-    .bl-menu{
+    
+    .bl-menu-father{
+        z-index: 4;
+        position: fixed;
         display: none;
+        flex-direction: column;
+        top: 80px;
+        left: 40%;
+        background-color: #FFFFFF;
+        padding: 5%;
+        box-shadow:0px 0px 3px 3px rgba(0,0,0,0.1);
+        width: 60%;  
+    }
+    .bl-menu-father a{
+        text-decoration: none;
+        color: #3f3f3f;
+    }
+    .bl-menu{
+        z-index: 4;
+        padding: 20px 10px;
+        border-radius: 10px;
+        
+    }
+    .bl-menu:hover{
+        background-color: #F1F5F7;
+    }
+    .bl-menu:hover .bl-submenu{
+        display: block;
+        
+        padding: 20px 50px;
+    }
+    .bl-search-input{
+        display: none;
+    }
+    .bl-submenu{
+        z-index: 4;
+        display: none;
+    }
+    .bl-submenu li{
+        
+        font-weight: light;
+        margin: 20px;
+
+    }
+    .bl-submenu li:hover{
+        background-color: #FFFFFF;
+        width: 150px;
+        padding: 10px;
+        border-radius: 10px;
+        
     }
     .bl-bar-icon{
         display: block;
         color: #3f3f3f;
-        height: 1.875rem;
-        width: 1.875rem;
-        
-        
-    }
-    .bl-bar-icon a{
-        color: white;
-    }
-    .bl-search-icon a{
-        color: #1363DE;
+       
     }
     .bl-search-input input{
         display: none;
-        border:none ;
-        border-bottom:0.125rem solid #1363DE;
+        border: none;
+        position: absolute;
+        top: 90px;
+        left: 0%;
+        padding: 0.8% 2%;
+        box-shadow: 3px 3px rgba(0,0,0,0.1);
+        border-radius: 10px;
         
     }
+    
+
     .bl-banner{
         padding-top: 80px;
         display: flex;
@@ -72,6 +118,7 @@
         
     }
     .bl-banner img{
+        z-index: 2;
         width: 90%;
         padding-bottom: 0px;
     }
@@ -106,7 +153,8 @@
        grid-template-rows: 6fr;
         gap: 1.25rem;
         background-color: #F1F5F7;
-        padding: 3.4rem;
+        align-items: center;
+        padding: 4%;
         width: auto;
         height: auto;
     }
@@ -125,7 +173,9 @@
     }
     .bl-card-txt:hover .bl-card-subtitle{
         display: block;
+        
     }
+    
     .bl-card-txt{
         z-index: 1;
         position: absolute;
@@ -159,7 +209,7 @@
         z-index: 2;
         position:relative;
         color: #FFFFFF;
-        font-size: larger;
+        font-size: normal;
     }
     .bl-card-subtitle{
         z-index: 2;
@@ -242,23 +292,26 @@
         text-decoration: none;
         color: #3f3f3f;
     }
+    .bl-menu-father{
+        display: flex;
+        flex-direction: row;
+        padding-right: 20px;
+        gap: 20px;
+        padding-left: 20px;
+    }
     .bl-submenu {
         display: none;
         position:absolute;
+        top: 90px;
         background-color:white;
         color:#3f3f3f;
         width: 200px;
-        padding: 15px 25px;
         font-size: small;
-        box-shadow: 1px 1px 1px 1px  #F1F5F7;
+        box-shadow:3px 3px 3px rgba(0,0,0,0.1);
+        border-radius: 10px;
     }
-    .bl-submenu {
-        border-bottom:3px #00e261;
-       
-    }
-    .bl-submenu a{
-        padding: 20px 10px;
-        
+    .bl-submenu li{
+        padding: 10px 10px;
     }
     .bl-menu:hover{
         color: #21AA58;
@@ -277,24 +330,22 @@
     }
     .bl-bar-icon{
         display: none;
-        background-color: #1363DE;
-        color: white;
+        color: #3f3f3f;
         height: 1.875rem;
         width: 1.875rem;
         text-align: center;
         vertical-align: center;
         border-radius: 15%;
     }
-    .bl-bar-icon a{
-        color: white;
-    }
-    .bl-search-icon a{
-        color: #1363DE;
-    }
+    
     .bl-search-input input{
         display: none;
-        border:none ;
-        border-bottom:0.125rem solid #1363DE;
+        border: none;
+        position: absolute;
+        top: 90px;
+        padding: 0.8% 2%;
+        box-shadow: 3px 3px rgba(0,0,0,0.1);
+        border-radius: 10px;
         
     }
     .bl-banner{
@@ -347,10 +398,12 @@
         gap: 1.25rem;
         background-color: #F1F5F7;
         padding: 3.75rem;
+        
     }
     .bl-card{
         width: auto;
         height: auto;
+        
         
 
     }
@@ -404,7 +457,7 @@
         z-index: 2;
         position:relative;
         color: #FFFFFF;
-        font-size: larger;
+        font-size: normal;
     }
     .bl-card-subtitle{
         z-index: 2;
