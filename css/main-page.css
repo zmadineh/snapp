@@ -82,6 +82,7 @@ body.hideScrollBar {
     border-style: solid;
     border-color: var(--clr-mainBorder);
     background-color: var(--clr-secondary);
+    z-index: 1;
 }
 
 .mp-menu {

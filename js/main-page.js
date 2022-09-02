@@ -1,5 +1,3 @@
-
-
 const hamburger = document.querySelector(".mp-hamburger");
 const navMneu = document.querySelector(".mp-menu");
 const sighUpNewText = document.querySelector("#sighUp-child");
@@ -102,8 +100,8 @@ function showSlides(n) {
         let i;
         let slides = document.querySelectorAll(".mySlides");
         let dots = document.querySelectorAll(".dot");
-        if (n > slides.length) slideIndex = 1
-        if (n < 1) slideIndex = slides.length
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
         for (i = 0; i < slides.length; i++) 
                 slides[i].style.display = "none";
         
