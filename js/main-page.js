@@ -1,10 +1,12 @@
+
+
 const hamburger = document.querySelector(".mp-hamburger");
 const navMneu = document.querySelector(".mp-menu");
 const sighUpNewText = document.querySelector("#sighUp-child");
 const overlay = document.querySelector('.mp-overlay');
 const body = document.querySelector('body');
 
-const list = document.querySelector("#list");
+const list = document.querySelector("#mp-dl_list");
 const listButton = document.querySelector(".mp-d-app-links-title");
 const listButtonIcone = document.querySelector("#open-close-icon");
 
@@ -126,6 +128,16 @@ sendBtn.addEventListener("click", () => {
         else {
                 errorText.textContent = '';
         }
+});
+
+
+$('#mp-slick').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
 });
 
 signUpProcContainer.appendChild(create("../src/img/income.png", "درآمد تضمینی + پاداش های ماهانه و هفتگی", "با فعالیت در ناوگان اسنپ، علاوه بر کسب درآمد مستمر و امکان تسویه در لحظه می‌توانید با شرکت در طرح‌های تشویقی مختلف، درآمد خود را افزایش دهید."));

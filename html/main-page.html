@@ -12,59 +12,62 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main-page.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+
     <script src="https://kit.fontawesome.com/725bbcf365.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="mp-overlay"></div>
 
-    <header class="mp-header-container">
-        <nav class="mp-top-nav">
-            <img alt="Snapp logo" src="https://web-cdn.snapp.ir/snapp-website/icons/snappTextLogo.svg" width="90" height="32" loading="lazy">   
+    <header class="mp-header mp-hf-width">
+        <img alt="Snapp logo" src="https://web-cdn.snapp.ir/snapp-website/icons/snappTextLogo.svg" width="90" height="32" loading="lazy">   
+        
+        <nav class="mp-top-nav">    
             <div class="mp-menu">
-                <a href="#">فرصت های شغلی</a>
-                <a href="#">بلاگ</a>
-                <a href="#">باشگاه رانندگان</a>
-                <div>
-                    <a href="#">ثبت نام راننده اسنپ</a>
-                    <a class="child-item" id="sighUp-child">(سواری، موتور، وانت)</a>
-                </div>
-                <a href="#">پنل سازمانی</a>
-                <a href="#">درباره ما</a>
-                <a href="#">تماس با ما</a>
-
+                <ul>
+                    <li><a href="#">فرصت های شغلی</a></li>
+                    <li><a href="#">بلاگ</a></li>
+                    <li><a href="#">باشگاه رانندگان</a></li>
+                    <li class="mp-adding-item">
+                        <a href="#">ثبت نام راننده اسنپ</a>
+                        <a class="child-item" id="sighUp-child">(سواری، موتور، وانت)</a>
+                    </li>
+                    <li><a href="#">پنل سازمانی</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+                
                 <span class="mp-seprator-line"></span>
 
-                <div class="mp-app-links-mobileview-container">
-                    <div class="mp-d-app-links-title-container"> 
-                        <a class="mp-d-app-links-title">
-                            <div>اپلیکیشن اسنپ</div>
-                            <i id="open-close-icon" class="fa-solid fa-angle-down"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="mp-d-app-links-list" id="list">
-                        <a>
-                            <img src="../src/img/googleplay.png" />
-                            <div>دانلود از گوگل پلی</div>
-                        </a>
-                        <a>
-                            <img src="../src/img/cafebazaar.png" />
-                            <div>دانلود از کافه بازار</div>
-                        </a>
-                        <a>
-                            <img src="../src/img/cafebazaar.png" />
-                            <div>وب اپلیکیشن اسنپ (ios)</div>
-                        </a>
-                        <a>
-                            <img src="../src/img/sibapp.png" />
-                            <div>دانلود از سیب اپ</div>
-                        </a>
-                        <a>
-                            <img src="../src/img/iapps (1).png" />
-                            <div>دانلود از آی اپس</div>
-                        </a>
-                    </div>
+                <div class="mp-download-mv">
+
+                    <a class="mp-download-mv-title">
+                        <span>اپلیکیشن اسنپ</span>
+                        <i id="open-close-icon" class="fa-solid fa-angle-down"></i>
+                    </a>
+                
+                    <ul id="mp-dl_list">
+                        <li>
+                            <a><img src="../src/img/googleplay.png" /><span>دانلود از گوگل پلی</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/cafebazaar.png" /><span>دانلود از کافه بازار</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/googleplay.png" /><span>وب اپلیکیشن اسنپ (ios)</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/sibapp.png" /><span>دانلود از سیب‌اپ</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/iapps (1).png" /><span>دانلود از آی‌اپس</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -88,8 +91,8 @@
                 <div class="mp-hero_form">
                     <div class="mp-input-container">
                         <input id="mp-phone_input" placeholder="۰۹xxxxx۲۶۱۸" class="mp-phone_input" value=""/>
-                        <i id="mp-circle-icon" class="fa-solid fa-circle mp-circleIcon"></i>
-                        <i id="mp-clear-icon" class="fa-solid fa-circle-xmark mp-clearIcon" style="display: none;" onclick="clearInput()"></i>
+                        <i id="mp-circle-icon" class="fa-solid fa-circle mp-circle_icon"></i>
+                        <i id="mp-clear-icon" class="fa-solid fa-circle-xmark mp-clear_icon" style="display: none;" onclick="clearInput()"></i>
                     </div>
                     <a id="mp-send_btn" class="mp-button mp-send_btn">ارسال لینک</a>
                 </div>
@@ -101,8 +104,7 @@
         </div>
     </section>
 
-
-    <section class="mp-download-links mp-l_padding mp-r_padding">
+    <section class="mp-download mp-l_padding mp-r_padding">
         <a><img src="../src/img/google-play-badge.png" /></a>
         <a><img src="../src/img/bazaar.png" /></a>
         <a><img src="../src/img/snapp-pwa.png" /></a>
@@ -114,12 +116,17 @@
 
     </section>
 
+    <section id="mp-image-carousel" class="mp-l_padding mp-r_padding">
+        <div id="mp-slick" class="mp-one-time_slick">
+            <div><img src="../src/img/Food.jpg" ></div>
+            <div><img src="../src/img/Food.jpg" ></div>
+            <div><img src="../src/img/Food.jpg" ></div>
+            <div><img src="../src/img/Food.jpg" ></div>
+          </div>
+      </section>
+
     <section class="mp-superApp">
         
-        <div class="mp-superApp-food mp-l_padding mp-r_padding">
-            <img src="../src/img/Food.jpg" />
-        </div>
-
         <div class="mp-superApp-intro">
             <div class="mp-superApp-img-container">
                 <img class="mp-procImage" src="../src/img/super-app.jpg" />
@@ -138,11 +145,11 @@
 
             <div class="mp-sbox-container1">
                 <div  class="mp-imag-container">
-                    <img src="../src/img/fast.png" />
+                    <img src="../src/img/easy.png" />
                 </div>
                 
                 <div class="mp-txt-container">
-                    <h3 class="mp-procText_h3">تیتر</h3>
+                    <h3 class="mp-procText_h3">آسان</h3>
                     <p class="mp-procText_para">سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام</p>
                 </div>
             </div>
@@ -153,18 +160,18 @@
                 </div>
                 
                 <div class="mp-txt-container">
-                    <h3 class="mp-procText_h3">تیتر</h3>
+                    <h3 class="mp-procText_h3">سریع</h3>
                     <p class="mp-procText_para">سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام</p>
                 </div>
             </div>
 
             <div class="mp-sbox-container1">
                 <div  class="mp-imag-container">
-                    <img src="../src/img/fast.png" />
+                    <img src="../src/img/eco.png" />
                 </div>
                 
                 <div class="mp-txt-container">
-                    <h3 class="mp-procText_h3">تیتر</h3>
+                    <h3 class="mp-procText_h3">به صرفه</h3>
                     <p class="mp-procText_para">سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام سلام</p>
                 </div>
             </div>
@@ -192,8 +199,8 @@
         </div>
     </section>
     
-    <footer>
-        <div style="background-color: white; height: 10vh; display:flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 4%;">
+    <footer class="mp-hf-padding">
+        <div style="background-color: white; height: 10vh; display:flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
             <div style="display: flex; gap:20px; justify-content: center; white-space: nowrap; flex-wrap: wrap; line-height: 50px;">
                 <a href="#">فرصت های شغلی</a>
                 <a href="#">بلاگ</a>
@@ -215,7 +222,8 @@
     </footer>
 
     <!--Scrip js-->
-    <script src="../js/main-page.js"></script>
+    <script src="../js/main-page.js"></script> 
+
 </body>
 </html>
  

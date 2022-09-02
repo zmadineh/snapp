@@ -1,3 +1,4 @@
+
 * {
     font-family: IRANSans;
 }
@@ -7,15 +8,13 @@ a {
     color: #494949;
 }
 
-:root {  
+:root {
 
     --clr--btnLink : #00D16F;
     --clr--inputClean : #A3A3A3;
     --clr--lightGreen: #0BD375;
     --clr-mainBorder: #e5e5e5;
-    
 }
-
 
 /* add to root */
 
@@ -58,22 +57,24 @@ body.hideScrollBar {
     padding-right: 16px;
 }
 
-.mp-header-container {
+.mp-hf-width {
+    padding: 0 16px;
+}
+
+.mp-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    background-color: var(--clr-secondary);
+    height: 8vh;
     position: sticky;
     top: 0; /* required */
     border-width: 1px;
     border-style: solid;
     border-color: var(--clr-mainBorder);
-}
-
-.mp-top-nav {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    height: 8vh;
+    background-color: var(--clr-secondary);
+    overflow: hidden;
 }
 
 .mp-menu {
@@ -97,7 +98,7 @@ body.hideScrollBar {
 }
 
 .mp-menu a {
-    font-size: 1rem;  
+    font-size: 0.9rem;
     white-space: nowrap; /* --- */
 }
 
@@ -198,11 +199,7 @@ body.hideScrollBar {
     width: 97%;
 }
 
-.mp-download-links {
-    display: none;
-}
-
-.mp-app-links-mobileview-container {
+.mp-download-mv {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -214,11 +211,7 @@ body.hideScrollBar {
     color: #3f3f3f;
 }
 
-.mp-d-app-links-title-container {
-    display: block;
-}
-
-.mp-d-app-links-title {
+.mp-download-mv-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -227,29 +220,26 @@ body.hideScrollBar {
     color: #0BD375; /*var(--clr-primary);*/
 }
 
-.mp-d-app-links-title i {
+.mp-download-mv-title i {
     font-size: 20px;
 }
 
-.mp-d-app-links-list {
+.mp-download, .mp-download-mv ul {
     display: none;
 }
 
-.mp-d-app-links-list.open {
+.mp-download-mv ul.open {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    transition: height 0.3s ease-out; 
+    transition: height 0.3s ease-out;
 }
 
-.mp-d-app-links-list.open a { 
+.mp-download-mv ul.open a {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center; 
+    align-items: center;
 }
 
-.mp-d-app-links-list.open img {
+.mp-download-mv ul.open img {
     margin-left: 5px;
 }
 
@@ -266,7 +256,7 @@ body.hideScrollBar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
 }
 
 .mp-signUp_container h2{
@@ -308,14 +298,14 @@ body.hideScrollBar {
 }
 
 .mp-procMainContainer {
-    background-color: var(--clr-secondary); 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
-    flex-wrap: wrap;  
+    background-color: var(--clr-secondary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     min-height: 22vh;
-    border-radius: 20px; 
+    border-radius: 20px;
     padding: 20px 20px 20px 30px;
 }
 
@@ -345,19 +335,21 @@ body.hideScrollBar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white; 
+    background-color: white;
 }
 
-.mp-superApp-food {
+/*------------------------*/
+.mp-one-time_slick {
     margin: 30px 0;
-
 }
 
-.mp-superApp-food img{
+.mp-one-time_slick img{
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
+
+/*------------------------*/
 
 .mp-superApp-intro {
     display: flex;
@@ -366,7 +358,7 @@ body.hideScrollBar {
 }
 
 .mp-superApp-img-container {
-    width: 100%; 
+    width: 100%;
 }
 
 .mp-superApp-img-container img {
@@ -395,26 +387,26 @@ body.hideScrollBar {
 }
 
 /* .mp-box-container {
-    
+
 }
 
 .mp-txt-container {
-   
+
 } */
 
 .mp-sbox-container {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     /* margin-top:-100px; */
 }
 
 .mp-sbox-container1 {
     width: 90%;
-    max-width: 90%; 
-    margin: 0 10px;
+    max-width: 90%;
+    /* margin: 0 10px; */
 }
 
 .mp-imag-container {
@@ -426,7 +418,7 @@ body.hideScrollBar {
 }
 
 .mp-imag-container img {
-    height: 20vh;
+    height: 22vh;
 }
 
 .mp-txt-container {
@@ -439,103 +431,73 @@ body.hideScrollBar {
     .mp-l_padding {
         padding-left: 85px;
     }
-    
+
     .mp-r_padding {
         padding-right: 85px;
     }
+
+    .mp-hf-width {
+        padding: 0 16px;
+    }
+
     .mp-sbox-container1 {
         width: 41%;
-        max-width: 41%; 
+        max-width: 41%;
         margin: 0 10px;
     }
 }
 
-@media only screen and (min-width: 870px) and (max-width: 1000px){
+@media only screen and (min-width: 870px) {
 	/*Tablet [840px -> 1000px]*/
 
     .mp-l_padding {
         padding-left: 85px;
     }
-    
+
     .mp-r_padding {
         padding-right: 85px;
     }
 
-    .mp-digitalSignUp {
-        margin: 30px 0;
-    }
-
-    .mp-sbox-container {
-        display: flex; 
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        margin-bottom: 20px;
-        
-    }
-    
-    .mp-sbox-container1 {
-        width: 41%;
-        max-width: 41%; 
-        margin: 0 4px;
-        
-    }
-
-    .mp-imag-container {
-        background-color: rgb(249, 249, 249);
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        border-radius: 10%;
-    }
-    
-    .mp-imag-container img {
-        height: 15vh;
-    }
-    
-}
-
-@media only screen and (min-width: 1001px){
-    /*Desktop [601px -> 991px]*/
-
-    .mp-l_padding {
-        padding-left: 10%;
-    }
-    
-    .mp-r_padding {
-        padding-right: 10%;
+    .mp-hf-width {
+        padding: 0 4%;
     }
 
     /* start menu -------------------------------------------------------------- */
 
-    .mp-header-container {
-        padding: 0 11%;  
-    }
-
-    .mp-top-nav {  
+    .mp-header {
         flex-direction: row;
         justify-content: flex-start;
+        width: 100%;
         height: 96px;
         min-height: 96px;
         z-index: 101;
     }
-   
+
     .mp-menu {
+        display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 30px;
-        position: relative; 
-        top: 0;
-        right: 0;
+        position: unset;
+        height: 96px;
+        max-width: 100%;
         transition: none;
-        background-color: #ffffff00;
+        background-color: #ffffff;
     }
+
+    .mp-menu ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .mp-adding-item {
+        display: inline;
+    }   
 
     .mp-hamburger {
         display: none;
         cursor: pointer;
-    }    
-    
+    }
+
     .child-item {
         display: none;
     }
@@ -549,7 +511,7 @@ body.hideScrollBar {
         flex-direction: row-reverse;
         min-height: 40vh;
     }
-    
+
     .mp-hero_image {
         background-image: url("../src/img/intro_desktop.jpg");
         background-position: right center;
@@ -614,12 +576,12 @@ body.hideScrollBar {
         opacity: 1;
     }
 
-    .mp-circleIcon {
+    .mp-circle_icon {
         font-size: 7px;
         display: flex;
     }
 
-    .mp-clearIcon {
+    .mp-clear_icon {
         display: none;
     }
 
@@ -640,7 +602,7 @@ body.hideScrollBar {
         font-size: 0.9rem;
         white-space: nowrap;
     }
-    
+
     .mp-enter-web_btn {
         display: flex;
         color: var(--clr-secondary);
@@ -653,34 +615,76 @@ body.hideScrollBar {
 
     .mp-download_btn {
         display: none;
-    } 
+    }
 
     /* end hero ------------------------------------------------------------ */
 
     /* start download app links -------------------------------------------- */
 
-    .mp-download-links {
+    .mp-download {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         height: 30vh;
-       
     }
 
-    .mp-download-links img {
+    .mp-download img {
         width: 160px;
         margin: 0 25px;
     }
 
-    .mp-seprator-line {
+    .mp-seprator-line, .mp-download-mv {
         display: none;
     }
 
-    .mp-app-links-mobileview-container {
-        display: none;
-    }
     /* end download app links --------------------------------------------------- */
+
+    .mp-digitalSignUp {
+        margin: 30px 0;
+    }
+
+    .mp-sbox-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .mp-sbox-container1 {
+        width: 41%;
+        max-width: 41%;
+        margin: 0 4px;
+    }
+
+    .mp-imag-container {
+        background-color: rgb(249, 249, 249);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+    }
+
+    .mp-imag-container img {
+        height: 20vh;
+    }
+}
+
+@media only screen and (min-width: 1001px){
+    /*Desktop [601px -> 991px]*/
+
+    .mp-l_padding {
+        padding-left: 10%;
+    }
+
+    .mp-r_padding {
+        padding-right: 10%;
+    }
+
+    .mp-hf-padding {
+        padding: 0 5%;
+    }
 
     /* start digital sign up section -------------------------------------------- */
 
@@ -690,10 +694,10 @@ body.hideScrollBar {
 
     .mp-signUpProc_container {
         flex-wrap: wrap;
-        gap: 16px;    
+        gap: 16px;
     }
 
-    .mp-procMainContainer {
+    .mp-procMainContainer { 
         justify-content: flex-start;
         flex-wrap: nowrap;
         width: calc(50% - 13px);
@@ -726,7 +730,7 @@ body.hideScrollBar {
     }
 
     .mp-superApp-img-container {
-        width: 50%; 
+        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -738,7 +742,7 @@ body.hideScrollBar {
         height: 100%;
         max-height: 70vh;
     }
-    
+
     .mp-superApp-text-container {
         width: 50%;
         padding-right: 50px;
@@ -748,33 +752,33 @@ body.hideScrollBar {
 
     .mp-sbox-container {
         /* position: absolute; */
-        display: flex; 
+        display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         margin-top:-100px;
         margin-bottom: 20px;
-        
+
     }
-    
+
     .mp-sbox-container1 {
         width: 27%;
-        max-width: 27%; 
-        margin: 0 20px;    
+        max-width: 27%;
+        margin: 0 20px;
     }
-    
+
     .mp-imag-container {
         background-color: rgb(249, 249, 249);
         width: 100%;
         display: flex;
         justify-content: center;
-        border-radius: 10%;
+        border-radius: 15px;
     }
-    
+
     .mp-imag-container img {
-        height: 15vh;
+        height: 22vh;
     }
-    
+
 }
 
 @media only screen and (min-width: 1390px){
@@ -783,9 +787,17 @@ body.hideScrollBar {
     .mp-l_padding {
         padding-left: 15%;
     }
-    
+
     .mp-r_padding {
         padding-right: 15%;
     }
 
+    .mp-hf-width {
+        padding: 0 11.5%;
+    }
+
+    .mp-download-links {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
 }
