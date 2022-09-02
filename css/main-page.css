@@ -1,11 +1,15 @@
-
 * {
     font-family: IRANSans;
+    /* overflow-x: hidden; */
 }
 
 a {
     cursor: pointer;
     color: #494949;
+}
+
+body {
+    background-color: var(--clr-secondary);
 }
 
 :root {
@@ -14,6 +18,10 @@ a {
     --clr--inputClean : #A3A3A3;
     --clr--lightGreen: #0BD375;
     --clr-mainBorder: #e5e5e5;
+    --clr-bg: #F2F5F8;
+
+    --header-size-mv: 64px;
+    --header-size: 96px;
 }
 
 /* add to root */
@@ -47,7 +55,7 @@ body.hideScrollBar {
     border-radius: 7px;
 }
 
-/* Start menu ------------------------------------------------------------------- */
+/* Start menu */
 
 .mp-l_padding {
     padding-left: 16px;
@@ -57,7 +65,7 @@ body.hideScrollBar {
     padding-right: 16px;
 }
 
-.mp-hf-width {
+.mp-hf_padding {
     padding: 0 16px;
 }
 
@@ -65,16 +73,15 @@ body.hideScrollBar {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
     width: 100%;
-    height: 8vh;
+    height: var(--header-size-mv);
     position: sticky;
     top: 0; /* required */
     border-width: 1px;
     border-style: solid;
     border-color: var(--clr-mainBorder);
     background-color: var(--clr-secondary);
-    overflow: hidden;
 }
 
 .mp-menu {
@@ -82,7 +89,7 @@ body.hideScrollBar {
     flex-direction: column;
     gap: 10px;
     position: fixed;
-    top: 64px;
+    top: var(--header-size-mv);
     right: -100%;
     max-width: 500px;
     width: 100%;
@@ -91,6 +98,7 @@ body.hideScrollBar {
     line-height: 3;
     background-color: var(--clr-secondary);
     transition: 0.3s;
+    overflow: hidden;
 }
 
 .mp-menu.mobileView {
@@ -115,7 +123,7 @@ body.hideScrollBar {
     display: block;
     width: 20px;
     height: 2px;
-    margin: 4px auto;
+    margin: 4px 0;
     background-color: black;
     border-radius: 20%;
 }
@@ -134,10 +142,9 @@ body.hideScrollBar {
     transition-duration: 0.2s;
 }
 
-/* end menu -------------------------------------------------------------------*/
+/* end menu */
 
-
-/* start hero ---------------------------------------------------------------- */
+/* start hero */
 
 .mp-hero_image {
     background-image: url("../src/img/intro_mobile.jpg");
@@ -187,9 +194,9 @@ body.hideScrollBar {
     font-size: 15px;
 }
 
-/* end hero ------------------------------------------------------------------- */
+/* end hero */
 
-/* start download app links --------------------------------------------------- */
+/* start download section */
 
 .mp-seprator-line {
     display: flex;
@@ -243,52 +250,190 @@ body.hideScrollBar {
     margin-left: 5px;
 }
 
-/* end download app links ----------------------------------------------------- */
+/* end download section */
 
-/* start digital sign up section ---------------------------------------------- */
+/* start super app section */
 
-.mp-digitalSignUp {
-    background-color: #F2F5F8;
-    padding: 30px 0;
+.mp-superApp {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
 }
 
-.mp-signUp_container {
+.mp-superApp-img {
+    width: 100%;
+}
+
+.mp-superApp-img img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 30vh;
+}
+
+.mp-superApp-text {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.mp-superApp-text h3 {
+    margin: 24px 0;
+    font-size: 22;
+    color: var(--clr-tertiary1);
+}
+
+.mp-superApp-text p {
+    margin: 8px 0;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 2.1;
+    color: var(--clr-tertiary1);
+}
+
+.mp-sbox-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mp-superApp-item {
+    width: 100%;
+    max-width: 100%;
+}
+
+.mp-superApp-item h3, p {
+    margin: 15px 5px;
+    font-size: 13px;
+}
+
+.mp-item_img {
+    background-color: #f2f5f8;
+    width: 100%;
+    display: flex;
+    border-radius: 18px;
+    justify-content: center;
+}
+
+.mp-item_img img {
+    height: 22vh;
+}
+
+/* end super app section */
+
+/* start image carousel */
+
+.mp-image-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.slideshow-container {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;    
+    border-radius: 10px;
+    object-fit: cover;
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--clr-secondary);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; 
+    user-select: none;
+}
+
+.next {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.btn-active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* end image carousel */
+
+/* start sign up section */
+
+.mp-signUp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--clr-bg);
+    padding-top: 30px;
 }
 
-.mp-signUp_container h2{
+.mp-signUp h2{
     text-align: center;
     padding: 20px;
     font-size: 30px;
 }
 
-.mp-signUp_para {
+.mp-signUp > p {
     text-align: center;
-    padding: 16px 0 0 0;
 }
 
-.mp-signUpProc_video {
+.mp-signUp video {
     width: 100%;
     border-radius: 10px;
 }
 
-.mp-signUp_btn {
+.mp-signUp a {
     display: flex;
     text-align: center;
     border-color: var(--clr-secondary);
     background-color: #0BD375; /*var(--clr-primary);*/
+    color: var(--clr-secondary);
     padding: 12px;
     margin: 40px;
     white-space: nowrap;
 }
-.mp-signUp_btn a {
-    color: var(--clr-secondary);
-}
 
-.mp-signUpProc_container {
+.mp-signUp-benefit {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -297,7 +442,7 @@ body.hideScrollBar {
     margin-top: 70px;
 }
 
-.mp-procMainContainer {
+.mp-signUp-benefit-item {
     background-color: var(--clr-secondary);
     display: flex;
     flex-direction: row;
@@ -306,144 +451,55 @@ body.hideScrollBar {
     flex-wrap: wrap;
     min-height: 22vh;
     border-radius: 20px;
-    padding: 20px 20px 20px 30px;
+    padding: 20px 20px 20px 20px;
 }
 
-.mp-procText_h3 {
+.mp-benefit_title {
     font-size: 15px;
     padding: 8px 0;
 }
 
-.mp-procText_para {
+.mp-benefit_body {
     font-size: 13px;
     line-height: 22px;
     padding: 5px 0;
     color: #3f3f3f;
-    text-align: justify;
 }
 
-.mp-procImage {
+.mp-benefit_img {
     align-self: center;
     width: 35%;
 }
 
-/* end digital sign up section ------------------------------------------------ */
+/* end sign up section */
 
-/* start super app section ---------------------------------------------------- */
+@media only screen and (min-width: 600px) {
 
-.mp-superApp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-}
 
-/*------------------------*/
-.mp-one-time_slick {
-    margin: 30px 0;
-}
-
-.mp-one-time_slick img{
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-/*------------------------*/
-
-.mp-superApp-intro {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0;
-}
-
-.mp-superApp-img-container {
-    width: 100%;
-}
-
-.mp-superApp-img-container img {
-    width: 100%;
-    object-fit: cover;
-    max-height: 30vh;
-}
-
-.mp-superApp-text-container {
-    width: 100%;
-    padding: 0 16px;
-}
-
-.mp-superApp-text-container h3 {
-    margin: 24px 0;
-    font-size: 22;
-    color: var(--clr-tertiary1);
-}
-
-.mp-superApp-text-container p {
-    margin: 8px 0;
-    font-size: 12px;
-    font-weight: 200;
-    line-height: 2.1;
-    color: var(--clr-tertiary1);
-}
-
-/* .mp-box-container {
-
-}
-
-.mp-txt-container {
-
-} */
-
-.mp-sbox-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    /* margin-top:-100px; */
-}
-
-.mp-sbox-container1 {
-    width: 90%;
-    max-width: 90%;
-    /* margin: 0 10px; */
-}
-
-.mp-imag-container {
-    background-color: #f2f5f8;
-    width: 100%;
-    display: flex;
-    border-radius: 18px;
-    justify-content: center;
-}
-
-.mp-imag-container img {
-    height: 22vh;
-}
-
-.mp-txt-container {
-
-}
-
-/* end super app section ------------------------------------------------------- */
-
-@media only screen and (min-width: 600px) and (max-width: 869px){
     .mp-l_padding {
-        padding-left: 85px;
+        padding-left: 16px;
     }
 
     .mp-r_padding {
-        padding-right: 85px;
+        padding-right: 16px;
     }
 
     .mp-hf-width {
         padding: 0 16px;
     }
 
-    .mp-sbox-container1 {
+    .mp-overlay {
+        display: none;
+    }
+
+    .mp-superApp-item {
         width: 41%;
         max-width: 41%;
         margin: 0 10px;
+    }
+
+    .mp-item_img {
+        height: 20vh;
     }
 }
 
@@ -458,19 +514,19 @@ body.hideScrollBar {
         padding-right: 85px;
     }
 
-    .mp-hf-width {
+    .mp-hf_padding {
         padding: 0 4%;
     }
 
-    /* start menu -------------------------------------------------------------- */
+    /* start menu */
 
     .mp-header {
         flex-direction: row;
         justify-content: flex-start;
         width: 100%;
-        height: 96px;
-        min-height: 96px;
-        z-index: 101;
+        height: var(--header-size);
+        min-height: var(--header-size);;
+        z-index: 1;
     }
 
     .mp-menu {
@@ -478,7 +534,6 @@ body.hideScrollBar {
         flex-direction: row;
         align-items: center;
         position: unset;
-        height: 96px;
         max-width: 100%;
         transition: none;
         background-color: #ffffff;
@@ -502,9 +557,9 @@ body.hideScrollBar {
         display: none;
     }
 
-    /* end menu -------------------------------------------------------------- */
+    /* end menu */
 
-    /* start hero ------------------------------------------------------------ */
+    /* start hero */
 
     .mp-hero {
         display: flex;
@@ -546,7 +601,7 @@ body.hideScrollBar {
         display: flex;
     }
 
-    .mp-input-container {
+    .mp-hero_form div {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -557,7 +612,7 @@ body.hideScrollBar {
         background-color: var(--clr-primary);
     }
 
-    .mp-phone_input {
+    .mp-hero_form input {
         border-style: none;
         background-color: var(--clr-primary);
         text-align: right;
@@ -566,7 +621,7 @@ body.hideScrollBar {
         width: 90%;
     }
 
-    ::placeholder {
+    .mp-phone_input::placeholder {
         color: var(--clr-secondary);
         opacity: 0.7; /* Firefox */
       }
@@ -617,9 +672,9 @@ body.hideScrollBar {
         display: none;
     }
 
-    /* end hero ------------------------------------------------------------ */
+    /* end hero */
 
-    /* start download app links -------------------------------------------- */
+    /* start download section */
 
     .mp-download {
         display: flex;
@@ -638,41 +693,37 @@ body.hideScrollBar {
         display: none;
     }
 
-    /* end download app links --------------------------------------------------- */
+    /* end download section */
 
-    .mp-digitalSignUp {
+    /* start super app section */
+
+    .mp-superApp-item {
+        width: 33%;
+        max-width: 33%;
+        margin: 0 10px;
+    }
+   
+    .mp-item_img {
+        height: 20vh;
+    }
+
+    /* end super app section */
+
+    /* start sign up section */
+
+    .mp-signUp {
         margin: 30px 0;
     }
 
     .mp-sbox-container {
-        display: flex;
-        flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: center;
         margin-bottom: 20px;
     }
-
-    .mp-sbox-container1 {
-        width: 41%;
-        max-width: 41%;
-        margin: 0 4px;
-    }
-
-    .mp-imag-container {
-        background-color: rgb(249, 249, 249);
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        border-radius: 15px;
-    }
-
-    .mp-imag-container img {
-        height: 20vh;
-    }
+    
+    /* end sign up section */
 }
 
 @media only screen and (min-width: 1001px){
-    /*Desktop [601px -> 991px]*/
 
     .mp-l_padding {
         padding-left: 10%;
@@ -682,102 +733,64 @@ body.hideScrollBar {
         padding-right: 10%;
     }
 
-    .mp-hf-padding {
+    .mp-hf_padding {
         padding: 0 5%;
     }
 
-    /* start digital sign up section -------------------------------------------- */
+    /* start super app section */
 
-    .mp-digitalSignUp {
-        margin: 30px 0;
-    }
-
-    .mp-signUpProc_container {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
-    .mp-procMainContainer { 
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        width: calc(50% - 13px);
-        margin-bottom: 20px;
-    }
-
-    .mp-procText {
-        padding-right: 15px;
-    }
-
-    /* end digital sign up section ------------------------------------------------ */
-
-     /* start food slider section ------------------------------------------------- */
-
-    .mp-superApp-food {
-        margin: 50px 0 10px 0;
-    }
-
-    .mp-superApp-food img {
-        width: 100%;
-    }
-
-     /* end food slider section -------------------------------------------------- */
-
-     /* start super app section -------------------------------------------------- */
-
-    .mp-superApp-intro {
+    .mp-superApp {
         flex-direction: row;
         /* position: relative; */
     }
 
-    .mp-superApp-img-container {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .mp-superApp-img-container img {
+    .mp-superApp-img img {
         object-fit: fill;
         height: 100%;
         max-height: 70vh;
     }
 
-    .mp-superApp-text-container {
-        width: 50%;
-        padding-right: 50px;
-    }
-
-    /*--------------*/
-
     .mp-sbox-container {
         /* position: absolute; */
+        margin-top:-100px;
+
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         margin-top:-100px;
         margin-bottom: 20px;
-
     }
 
-    .mp-sbox-container1 {
+    .mp-superApp-item {
         width: 27%;
         max-width: 27%;
         margin: 0 20px;
     }
 
-    .mp-imag-container {
-        background-color: rgb(249, 249, 249);
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        border-radius: 15px;
+    .mp-superApp-item {
+        width: 27%;
+        max-width: 27%;
+        margin: 0 20px;
     }
 
-    .mp-imag-container img {
-        height: 22vh;
+    /* end super app section */
+
+    /* start sign up section */
+
+    .mp-signUp-benefit {
+        flex-wrap: wrap;
+        gap: 16px;    
     }
+
+    .mp-signUp-benefit-item {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: calc(50% - 13px);
+        margin-bottom: 20px;
+    }
+
+    /*end sing up section */
 
 }
 
@@ -792,11 +805,11 @@ body.hideScrollBar {
         padding-right: 15%;
     }
 
-    .mp-hf-width {
+    .mp-hf_padding {
         padding: 0 11.5%;
     }
 
-    .mp-download-links {
+    .mp-download {
         justify-content: space-between;
         flex-wrap: nowrap;
     }
