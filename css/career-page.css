@@ -228,15 +228,15 @@
 
 .cp_career-box h5{
     color: #2a333d;
-    display: block; /* for inline elements e.g. span, strong, em etc */
-    width: calc(80%);
+    display:inline-block; /* for inline elements e.g. span, strong, em etc */
+    width: calc(100%);
     font-size: 16px;
     font-weight: 600;
     line-height: 1.2;
     margin-top: 8px;
     margin-bottom: 7px;
     overflow:hidden;
-    white-space: nowrap;
+    white-space:wrap;
     text-overflow: ellipsis;
     text-align: left;
 }
