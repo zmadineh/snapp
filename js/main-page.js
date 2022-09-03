@@ -4,7 +4,8 @@ const sighUpNewText = document.querySelector("#sighUp-child");
 const overlay = document.querySelector('.mp-overlay');
 const body = document.querySelector('body');
 
-const list = document.querySelector("#mp-dl_list");
+const wrapper = document.querySelector('.mp-details-wrapper');
+const list = document.querySelector(".mp-accordion_menu");
 const listButton = document.querySelector(".mp-download-mv-title");
 const listButtonIcone = document.querySelector("#open-close-icon");
 
@@ -41,6 +42,7 @@ function clearInput () {
         clearIcon.style.display = "none";
         errorText.textContent = '';
 }
+
 
 function create (img, title, body) {
         
@@ -104,19 +106,17 @@ function showSlides(n) {
         if (n < 1) slideIndex = slides.length;
         for (i = 0; i < slides.length; i++) 
                 slides[i].style.display = "none";
-        
+
         for (i = 0; i < dots.length; i++) 
                 dots[i].className = dots[i].className.replace(" btn-active", "");
-        
+
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " btn-active";
 } 
 
 
-      
 hamburger.addEventListener("click", () => {
-    handleHamburgerMneu();
-    
+    handleHamburgerMneu();    
 });
 
 overlay.addEventListener('click', () => {
@@ -127,7 +127,7 @@ overlay.addEventListener('click', () => {
 
 /* When the user clicks on the button,
 toggle between closing and opening the list content */
-listButton.addEventListener("click", () => {
+listButton.addEventListener("click", (e) => {
         list.classList.toggle('open');
         listButtonIcone.classList.toggle('fa-angle-down');
         listButtonIcone.classList.toggle('fa-angle-up');
