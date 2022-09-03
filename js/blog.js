@@ -5,21 +5,41 @@ function bl_search_Function() {
     } else {
       x.style.display = "block";
     }
-    const icon = document.getElementsByClassName(".bl-search-icon")
-    if(icon.classList.contains("fa-solid fa-magnifying-glass")){
-      icon.classList.replace("fa-regular fa-xmark");
-      icon.classList.remove("fa-solid fa-magnifying-glass");
-      icon.classList.add("fa-regular fa-xmark");
-    }else{
-      icon.classList.add("fa-solid fa-magnifying-glass");
-    }
     
   }
 function bl_hamburger_Function(){
-  const x = document.getElementsByClassName(".bl-menu-father");
-  if(x.style.display ==="flex"){
-    x.style.display = "none";
+  const x = document.getElementById("bl-menu-father");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+    
+}
+function bl_submenu_Function(){
+  const x = document.getElementsByClassName("bl-submenu");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    
+}
+window.onscroll = function() {blHeader()};
+
+function blHeader() {
+  const y = document.body.scrollTop();
+  const x = document.getElementsByClassName("bl-header")
+  if (y > 100) {
+    x.style.height = "70px";
   }
-  else {
-    x.style.display = "flex";
-}}
+}
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+
+  if (document.documentElement.scrollTop > 100) {
+    document.getElementById("bl-slide").className = "slideUp";
+  }
+}
