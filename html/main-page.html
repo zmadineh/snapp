@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>سوپر اپلیکیشن اسنپ | سامانه هوشمند</title>
-    <link rel="icon" type="image/png" href="../src/img/snapp-pwa.svg"/>
+    <link rel="icon" type="image/png" href="../src/img/main-page/snapp-pwa.svg"/>
     
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/main-page.css">
 
     <script src="https://kit.fontawesome.com/725bbcf365.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
 </head>
 
 <body>
     <div class="mp-overlay"></div>
 
     <header class="mp-header mp-hf_padding">
-        <img alt="Snapp logo" src="https://web-cdn.snapp.ir/snapp-website/icons/snappTextLogo.svg" width="90" height="32" loading="lazy">   
+        <img alt="Snapp logo" src="../src/img/main-page/snappTextLogo.svg" width="90" height="32" loading="lazy">   
         
         <nav class="mp-top-nav">    
             <div class="mp-menu">
@@ -48,19 +49,19 @@
                     <div class="mp-details-wrapper">
                         <ul class="mp-accordion_menu" id="mp-dl_list">
                             <li>
-                                <a><img src="../src/img/googleplay.png" /><span>دانلود از گوگل پلی</span></a>
+                                <a><img src="../src/img/main-page/googleplay.png" /><span>دانلود از گوگل پلی</span></a>
                             </li>
                             <li>
-                                <a><img src="../src/img/cafebazaar.png" /><span>دانلود از کافه بازار</span></a>
+                                <a><img src="../src/img/main-page/cafebazaar.png" /><span>دانلود از کافه بازار</span></a>
                             </li>
                             <li>
-                                <a><img src="../src/img/googleplay.png" /><span>وب اپلیکیشن اسنپ (ios)</span></a>
+                                <a><img src="../src/img/main-page/snapp-pwa.svg" height="24px" width="24px"/><span>وب اپلیکیشن اسنپ (ios)</span></a>
                             </li>
                             <li>
-                                <a><img src="../src/img/sibapp.png" /><span>دانلود از سیب‌اپ</span></a>
+                                <a><img src="../src/img/main-page/sibapp.png" /><span>دانلود از سیب‌اپ</span></a>
                             </li>
                             <li>
-                                <a><img src="../src/img/iapps (1).png" /><span>دانلود از آی‌اپس</span></a>
+                                <a><img src="../src/img/main-page/iappsl.png" /><span>دانلود از آی‌اپس</span></a>
                             </li>
                         </ul>
                     </div>
@@ -99,92 +100,105 @@
         </div>
     </section>
 
-    <section class="mp-download mp-l_padding mp-r_padding">
-        <a><img src="../src/img/google-play-badge.png" /></a>
-        <a><img src="../src/img/bazaar.png" /></a>
-        <a><img src="../src/img/snapp-pwa.png" /></a>
-        <a><img src="../src/img/sibapp-badge-white.png" /></a>
-        <a><img src="../src/img/iApps.png" /></a>
+    <section class="mp-center">
+        <div class="mp-container">
+            <div class="mp-download">
+                <a><img src="../src/img/main-page/google-play-badge.png" /></a>
+                <a><img src="../src/img/main-page/bazaar.png" /></a>
+                <a><img src="../src/img/main-page/snapp-pwa.png" /></a>
+                <a><img src="../src/img/main-page/sibapp-badge-white.png" /></a>
+                <a><img src="../src/img/main-page/iApps.png" /></a>
+            </div>
+        </div>
     </section>
-      
-    <section style="background-color: #F2F5F8; height: 50vh;">
-    </section>
 
-    <section class="mp-image-carousel mp-l_padding mp-r_padding">
-        <div class="slideshow-container">
+    <section class="mp-center">
+        <div class="mp-container">
+            <div class="mp-image-carousel">
+                <div class="slideshow-container">
 
-            <a class="mySlides fade"><img src="../src/img/Food.jpg"></a>
-            <a class="mySlides fade"><img src="../src/img/Club.jpg"></a>
-            <a class="mySlides fade"><img src="../src/img/Driver.jpg"></a>
-            <a class="mySlides fade"><img src="../src/img/Market.jpg"></a>
+                    <a class="mySlides fade"><img src="../src/img/main-page/Food.jpg"></a>
+                    <a class="mySlides fade"><img src="../src/img/main-page/Club.jpg"></a>
+                    <a class="mySlides fade"><img src="../src/img/main-page/Driver.jpg"></a>
+                    <a class="mySlides fade"><img src="../src/img/main-page/Market.jpg"></a>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-            <div style="position: absolute; bottom: 0; text-align: center; left: 45%;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
+                    <div style="position: absolute; bottom: 0; text-align: center; left: 45%;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
             </div>
         </div>        
     </section>
 
-    <section>  
+    <section>
         <div class="mp-superApp">
             <div class="mp-superApp-img">
-                <img src="../src/img/super-app.jpg" />
+                <img src="../src/img/main-page/super-app.jpg" />
             </div>
-            <div class="mp-superApp-text mp-l_padding">
-                <h3>سوپر اپ اسنپ پاسخی به تمام نیازها</h3>
-                <p>اسنپ، اولین تاکسی اینترنتی ایران، بعد از پنج سال فعالیت در حوزه تردد شهری ، به یک سوپر اپ با خدمات متنوع تبدیل شد.
-                    سوپر اپ اسنپ راه حلی جدید و ساده است که با استفاده از آن تنها با یک اپلیکیشن می توانید علاوه بر درخواست خودرو، موتور
-                    وانت از خدمات متعددی از جمله سفارش غذا، پزشک و مشاور آنلاین، خرید از سوپر مارکت ها و فروشگاه ها، اسباب کشی ، خرید بلیط (هواپیما، اتوبوس و قطار)،
-                    رزرو هتل، پرداخت قبض و خرید شارژ استفاده کنید.
-                </p>
-            </div>
-        </div>
-
-        <div class="mp-sbox-container mp-l_padding mp-r_padding">
-            <div class="mp-superApp-item">
-                <div  class="mp-item_img"><img src="../src/img/easy.png" /></div>
-                <h3 class="mp-procText_h3">آسان</h3>
-                <p class="mp-procText_para">برای استفاده از هر کدام از خدمات سوپراپ اسنپ کافی است وارد اپلیکیشن اسنپ شوید و روی آیکون مورد نظر بزنید.</p>
-            </div>
-
-            <div class="mp-superApp-item">
-                <div class="mp-item_img"><img src="../src/img/fast.png" /></div>
-                <h3 class="mp-procText_h3">سریع</h3>
-                <p class="mp-procText_para">قرار گرفتن خدمات مختلف در بک  پلتفرم به صرفه‌جویی در زمان کمک می‌کند. سوپر اپ اسنپ پاسخی سریع به نیازهای روزمره شماست.</p>
-     
-            </div>
-
-            <div class="mp-superApp-item">
-                <div  class="mp-item_img"><img src="../src/img/eco.png" /></div>
-                <h3 class="mp-procText_h3">به صرفه</h3>
-                <p class="mp-procText_para">سوپراپ اسنپ علاوه بر زمان در هزینه های شما نیز صرفه‌جویی می‌کند تا بهترین خدمات را با قیمتی منطقی دریافت کنید.</p>
+            <div class="mp-superApp-text-container">
+                <div class="mp-superApp-text">
+                    <h3>سوپر اپ اسنپ پاسخی به تمام نیازها</h3>
+                    <p>اسنپ، اولین تاکسی اینترنتی ایران، بعد از پنج سال فعالیت در حوزه تردد شهری ، به یک سوپر اپ با خدمات متنوع تبدیل شد.
+                        سوپر اپ اسنپ راه حلی جدید و ساده است که با استفاده از آن تنها با یک اپلیکیشن می توانید علاوه بر درخواست خودرو، موتور
+                        وانت از خدمات متعددی از جمله سفارش غذا، پزشک و مشاور آنلاین، خرید از سوپر مارکت ها و فروشگاه ها، اسباب کشی ، خرید بلیط (هواپیما، اتوبوس و قطار)،
+                        رزرو هتل، پرداخت قبض و خرید شارژ استفاده کنید.
+                    </p>
+                </div>
             </div>
         </div>
 
+        <div class="mp-center">
+            <div class="mp-container">
+                <div class="mp-sbox-container">
+                    <div class="mp-superApp-item">
+                        <div  class="mp-item_img"><img src="../src/img/main-page/easy.png" /></div>
+                        <h3 class="mp-procText_h3">آسان</h3>
+                        <p class="mp-procText_para">برای استفاده از هر کدام از خدمات سوپراپ اسنپ کافی است وارد اپلیکیشن اسنپ شوید و روی آیکون مورد نظر بزنید.</p>
+                    </div>
+
+                    <div class="mp-superApp-item">
+                        <div class="mp-item_img"><img src="../src/img/main-page/fast.png" /></div>
+                        <h3 class="mp-procText_h3">سریع</h3>
+                        <p class="mp-procText_para">قرار گرفتن خدمات مختلف در بک  پلتفرم به صرفه‌جویی در زمان کمک می‌کند. سوپر اپ اسنپ پاسخی سریع به نیازهای روزمره شماست.</p>
+            
+                    </div>
+
+                    <div class="mp-superApp-item">
+                        <div  class="mp-item_img"><img src="../src/img/main-page/eco.png" /></div>
+                        <h3 class="mp-procText_h3">به صرفه</h3>
+                        <p class="mp-procText_para">سوپراپ اسنپ علاوه بر زمان در هزینه های شما نیز صرفه‌جویی می‌کند تا بهترین خدمات را با قیمتی منطقی دریافت کنید.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="mp-signUp mp-r_padding mp-l_padding">
-            <h2>در کمتر از 10 دقیقه ثبت‌نام کنید و به ناوگان اسنپ بپیوندید.</h2>
-            <p>بدون نیاز به مراجعه‌ی حضوری، از طریق این صفحه، تمام مراحل ثبت‌نام را اینترنتی انجام دهید</p>
+    
+    <section class="mp-center mp-second-bg-clr">
+        <div class="mp-container">
+            <div class="mp-signUp">
+                <h2>در کمتر از 10 دقیقه ثبت‌نام کنید و به ناوگان اسنپ بپیوندید.</h2>
+                <p>بدون نیاز به مراجعه‌ی حضوری، از طریق این صفحه، تمام مراحل ثبت‌نام را اینترنتی انجام دهید</p>
 
-            <a class="mp-button">ثبت نام رانندگان</a>
-            
-            <video controls>
-                <source src="../src/video/jazb-ranande.mp4" typ="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            
-            <div class="mp-signUp-benefit" id="mp-signUp-benefit"></div>
+                <a class="mp-button">ثبت نام رانندگان</a>
+                
+                <video controls>
+                    <source src="../src/video/jazb-ranande.mp4" typ="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="mp-signUp-benefit" id="mp-signUp-benefit"></div>
+            </div>
+        </div>
     </section>
     
-    <footer class="mp-hf-padding">
-       
-    </footer>
+
 
     <!--Scrip js-->
      <script src="../js/main-page.js"></script> 
