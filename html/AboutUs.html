@@ -15,7 +15,7 @@
     <header class="AU__header">
         <div class="AU__header--menu">
             <img class="AU__logo" src="../src/img/about-us-image/snappTextLogo.svg">
-            <div class="AU__burger--logo d-none">
+            <div class="AU__burger--logo ">
                 <i class=" icon  AU__BM  fa-solid fa-bars fa-lg"></i>
             </div>
             <div class="AU__deskMenu">
@@ -28,7 +28,7 @@
                 <a href="" class="AU__deskMenu--items">تماس با ما</a>
             </div>
         </div>
-        <div class="AU__burgerMenu  AU__burgerMenu--hidden  burgerMenu__toggle">
+        <div class="AU__burgerMenu  d-none">
             <nav>
                 <ul class="AU__burgerMenu--list">
                     <li class="AU__burgerMenu__items"><a href="">فرصت های شغلی</a></li>
@@ -40,9 +40,31 @@
                     <li class="AU__burgerMenu__items"><a href="">تماس با ما</a></li>
                 </ul>
             </nav>
-            
+
             <div class="AU__burgerMenu__footer">
-                <a href="" class="AU__burgerMenu__footer--text"> اپلیکیشن اسنپ</a>
+                <a class="AU__burgerMenu__footer--text">
+                    <span> اپلیکیشن اسنپ</span>
+                    <i id="open-close-icon" class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="AU__details-wrapper">
+                    <ul class="AU__accordion_menu"  id="mp-dl_list">
+                        <li>
+                            <a><img src="../src/img/googleplay.png" /><span>دانلود از گوگل پلی</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/cafebazaar.png" /><span>دانلود از کافه بازار</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/googleplay.png" /><span>وب اپلیکیشن اسنپ (ios)</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/sibapp.png" /><span>دانلود از سیب‌اپ</span></a>
+                        </li>
+                        <li>
+                            <a><img src="../src/img/iapps (1).png" /><span>دانلود از آی‌اپس</span></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -90,12 +112,12 @@
         <div class="AU__main--makeeasier">زندگی خودتو با اسنپ ساده تر کن!</div>
         <button class="AU__main--btn">ورود به وب اپلیکیشن اسنپ(iOS)</button>
     </div>
-    
+
     <div class="AU__main--buttom--desk">
         <div class="AU__main--makeeasier--desk">زندگی خودتو با اسنپ ساده تر کن!</div>
         <button class="AU__main--btn--desk">ارسال لینک</button>
     </div>
-    
+
     <div class="AU__footer">
         <ul class="AU__footer-list">
             <li class="AU__footer-items">فرصت های شغلی</li>

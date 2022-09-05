@@ -7,10 +7,10 @@ a:visited {
 }
 
 body {
-    
+
     overflow-x: hidden;
     /* Hide horizontal scrollbar */
-    
+
 }
 
 
@@ -126,15 +126,17 @@ body {
 /*Start burgerMenu*/
 .AU__burgerMenu {
     direction: rtl;
+    background-color: #fff;
 
 }
 
 .AU__burgerMenu--list {
     list-style: none;
+    padding: 18px;
 }
 
-.AU__deskMenu__items {
-    height: 36PX;
+.AU__burgerMenu__items {
+    height: 36px;
     padding: 0;
     margin: 18px 5px;
     cursor: pointer;
@@ -142,6 +144,33 @@ body {
     box-sizing: border-box;
     border-color: inherit;
     text-decoration: none;
+
+}
+
+.AU__details-wrapper {
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.AU__accordion_menu {
+    overflow: hidden;
+    transform: translate(0, -100%);
+    transition: all 300ms ease-in-out;
+}
+
+.AU__accordion_menu.open {
+    transform: translate(0, 0);
+}
+
+.AU__accordion_menu.open a {
+    display: flex;
+    align-items: center;
+}
+
+.AU__accordion_menu.open img {
+    margin-left: 5px;
+
 
 }
 
@@ -162,22 +191,23 @@ body {
     border-top: 1px solid rgb(223, 220, 220);
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-.AU__burgerMenu__footer::after {
-    content: "v";
-    color: green;
-    margin: 10px;
-}
+
 
 .AU__burgerMenu__footer--text {
-    height: 36PX;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 36px;
     padding: 0;
     margin: 5px;
     cursor: pointer;
     color: green;
     font-size: 15px;
     font-family: IRANSans;
+
 }
 
 
@@ -291,7 +321,7 @@ body {
 
     .AU__hero--description--text {
         position: absolute;
-        top:200px;
+        top: 200px;
     }
 
 }
@@ -391,17 +421,18 @@ body {
 
 
 @media only screen and (min-width : 840px) {
-    .AU__main{
+    .AU__main {
         padding-left: 24px;
         padding-right: 24px;
     }
-    .AU__main--aus{
+
+    .AU__main--aus {
         padding-left: 24px;
-        padding-right: 24px;  
+        padding-right: 24px;
     }
-    
-    
-    
+
+
+
     .AU__main--makeeasier {
         display: none;
     }

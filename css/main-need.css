@@ -162,7 +162,7 @@ body {
     .main--need--items {
         width: 29%;
         max-width: 321px;
-        border-radius: 13%;
+        border-radius: 25px;
         padding-left: 0%;
         padding-right: 0%;
     }
