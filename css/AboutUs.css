@@ -2,9 +2,17 @@ a:visited {
     color: unset;
 }
 
-.d-none{
+.d-none {
     display: none;
 }
+
+body {
+    
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    
+}
+
 
 /* Start Header*/
 
@@ -27,14 +35,14 @@ a:visited {
     align-items: center;
     height: 64px;
     border-bottom: 1px solid rgb(223, 220, 220);
-    font-family:  IRANSans;
+    font-family: IRANSans;
 }
 
 .AU__deskMenu {
     display: none;
 }
 
-.AU__logo{
+.AU__logo {
     cursor: pointer;
 }
 
@@ -43,14 +51,19 @@ a:visited {
         direction: rtl;
         display: flex block;
         width: 100%;
-        padding: 15px 40px;
-        height: 68px;
+        padding: 10px 40px;
+        height: 96px;
+        min-height: 96px;
 
     }
 
     .AU__header--menu {
         border: none;
         align-items: center;
+        white-space: nowrap;
+        font-size: 12px;
+        color: #404040;
+
     }
 
     .AU__deskMenu {
@@ -78,7 +91,7 @@ a:visited {
 
 
 .AU__deskMenu--items {
-    font-family:  IRANSans;
+    font-family: IRANSans;
     list-style: none;
     text-decoration: none;
     margin: 13px 12px;
@@ -164,7 +177,7 @@ a:visited {
     cursor: pointer;
     color: green;
     font-size: 15px;
-    font-family:  IRANSans;
+    font-family: IRANSans;
 }
 
 
@@ -194,7 +207,7 @@ a:visited {
     background-image: url(../src/img/about-us-image/about-intro--mobile.jpg);
     background-position: right center;
     background-size: cover;
-    min-height: 49vh;
+    min-height: 48.2vh;
 }
 
 .AU__hero--description {
@@ -204,26 +217,28 @@ a:visited {
     padding: 16px 24px;
     line-height: 1.7;
     font-family: IRANSans;
+    padding: 24px 16px;
 
 }
 
 
 .AU__hero--description--heading {
-    font-size: 25px;
+    font-size: 27px;
     line-height: 48px;
     font-weight: 700;
-    color: #fff;
+    color: white;
     margin: 0;
     font-family: IRANSans;
 }
 
 
 .AU__hero--description--text {
-    font-size: 17.08px;
-    color: #fff;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-family:  IRANSans;
+    font-size: 15px;
+    color: white;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: IRANSans;
+    line-height: 1.7;
 }
 
 
@@ -237,9 +252,9 @@ a:visited {
     min-width: 430px;
     background-color: #fff;
     color: rgb(64, 64, 64);
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
-    font-family:  IRANSans;
+    font-family: IRANSans;
 
 }
 
@@ -259,35 +274,26 @@ a:visited {
 
 
     .AU__hero--description {
-        width: 45%;
+        width: 58%;
         position: relative;
         padding-top: 24px;
         padding-bottom: 24px;
         padding-left: 24px;
-        padding-right: 85px;
+        padding-right: 75px;
     }
 
     .AU__hero--description--heading {
         position: absolute;
-        top: 130px;
+        top: 40px;
         font-size: 35px;
 
     }
 
     .AU__hero--description--text {
         position: absolute;
-        top: 250px;
+        top:200px;
     }
 
-    .AU__hero--image {
-        background-image: url(../src/img/about-us-image/about-intro--mobile.jpg);
-        background-position: center;
-
-        /* background-size: cover;
-        min-height: 49vh;*/
-
-
-    }
 }
 
 @media only screen and (min-width : 1000px) {}
@@ -306,43 +312,48 @@ a:visited {
     align-items: center;
     margin-right: 30px;
     margin-left: 30px;
-    padding-top: 40px;
+    padding-top: 46px;
     gap: 40px;
+
 }
 
 .AU__main--aus {
-    margin-top: 32px;
-    margin-bottom: 23px;
-    font-size: 22px;
+    color: #404040;
+    font-weight: bold;
     text-align: right;
-    font-family:  IRANSans;
-
+    display: absolute;
+    margin-right: 30px;
+    padding-top: 65px;
+    font-size: 21px;
+    font-family: IRANSans;
 }
 
 .AU__main--description {
-    font-size: 14.5px;
+    font-size: 14px;
     text-align: right;
+    word-spacing: 3%;
+    font-weight: lighter;
     margin: 0;
-    line-height: 1.7;
-    font-family:  IRANSans;
-    color: rgb(85, 84, 84);
+    line-height: 1.9;
+    font-family: IRANSans;
+    color: #585858;
 }
 
 .AU__main--active-cities {
-    color: #21aa58;
+    color: #0bd170;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
-    font-family:  IRANSans;
+    font-size: 15px;
+    font-family: IRANSans;
 }
 
 .AU__main--map {
-    width: 85%;
+    width: 89%;
     max-width: 550px;
     vertical-align: baseline;
     direction: rtl;
     cursor: pointer;
-    padding-right: 20px;
+    padding-right: 45px;
 }
 
 .AU__main--makeeasier {
@@ -351,17 +362,18 @@ a:visited {
     margin-left: 16px;
     margin-right: 16px;
     text-align: center;
-    font-family:  IRANSans;
+    font-family: IRANSans;
+    color: #404040;
 }
 
 
 .AU__main--btn {
     font-size: 16px;
-    font-family:  IRANSans;
+    font-family: IRANSans;
     font-weight: bold;
     height: 48px;
     width: 300px;
-    background-color: #00e261;
+    background-color: #0bd170;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -379,6 +391,17 @@ a:visited {
 
 
 @media only screen and (min-width : 840px) {
+    .AU__main{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .AU__main--aus{
+        padding-left: 24px;
+        padding-right: 24px;  
+    }
+    
+    
+    
     .AU__main--makeeasier {
         display: none;
     }
@@ -398,16 +421,17 @@ a:visited {
     }
 
     .AU__main--makeeasier--desk {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
+        color: #404040;
     }
 
     .AU__main--btn--desk {
         width: 100px;
-        font-size: 17px;
+        font-size: 13px;
         font-weight: bold;
         height: 44px;
-        background-color: #21aa58;
+        background-color: #0bd170;
         color: #fff;
         border: none;
         border-radius: 8%;
@@ -441,7 +465,10 @@ a:visited {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    line-height: 1.7;
+    font-weight: lighter;
 }
+
 
 .AU__footer-items {
     height: 32px;
@@ -450,8 +477,10 @@ a:visited {
     display: inline-block;
     text-decoration: none;
     font-size: 14px;
+    font-weight: lighter;
     cursor: pointer;
-    font-family:  IRANSans;
+    font-family: IRANSans;
+    color: #404040;
 
 }
 
@@ -460,6 +489,7 @@ a:visited {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-bottom: 32px;
 
 }
 
@@ -480,8 +510,8 @@ a:visited {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-left: 35px;
-        padding-right: 35px;
+        margin-left: 35px;
+        margin-right: 35px;
         padding-top: 23px;
         padding-bottom: 23px;
     }
@@ -492,24 +522,48 @@ a:visited {
 
     }
 
-
     .AU__footer-items {
-        font-size: 16px;
+        color: #404040;
+        font-size: 13px;
         letter-spacing: -.2px;
-        margin: 0;
-        margin-right: 15px;
+        margin: 16;
         justify-content: right;
+        display: inline-block;
     }
 
     .AU__footer-icons {
         margin-left: 15px;
+        padding-top: 15px;
     }
 
 }
 
-@media only screen and (min-width : 1000px) {}
+@media only screen and (min-width : 1000px) {
+    .AU__footer-items {
+        font-size: 14px;
 
-@media only screen and (min-width : 1440px) {}
+    }
+}
+
+@media only screen and (min-width : 1440px) {
+    .AU__footer-items {
+        font-size: 14px;
+
+    }
+
+    .AU__footer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .AU__footer-icons {
+        margin-left: 140px;
+    }
+
+    .AU__footer-list {
+        margin-right: 140px;
+    }
+}
 
 /*End footer*/
 
