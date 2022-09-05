@@ -1,10 +1,6 @@
-* {
-    font-family: IRANSans;
-}
-
-a {
-    cursor: pointer;
-    color: #494949;
+/* main styles ------------------------------------------------------------------- */
+.mp-font {
+    font-family: --ff-title;
 }
 
 .mp-center {
@@ -18,23 +14,13 @@ a:active {
     text-transform: none;
 }
 
-:root {
-
-    --clr--btnLink : #00D16F;
-    --clr--inputClean : #A3A3A3;
-    --clr--lightGreen: #0BD375;
-    --clr-mainBorder: #e5e5e5;
-    --clr-bg: #F2F5F8;
-
-    --header-size-mv: 64px;
-    --header-size: 96px;
-}
-/* add to root */
-
-/* main styles ------------------------------------------------------------------- */
 body.hideScrollBar {
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+body a {
+    color: #494949;
 }
 
 .mp-overlay {
@@ -119,11 +105,11 @@ body.hideScrollBar {
 }
 
 .mp-menu a:active, a:focus{
-    color: var(--clr--btnLink);
+    color: var(--clr-btnLink);
 }
 
 .child-item.active {
-    color: var(--clr--btnLink);
+    color: var(--clr-btnLink);
 }
 
 .mp-hamburger {
@@ -211,7 +197,7 @@ body.hideScrollBar {
 }
 
 .mp-more_btn {
-    color: var(--clr--btnLink);
+    color: var(--clr-btnLink);
     padding: 10px 20px;
     margin-bottom: 20px;
 }
@@ -311,7 +297,7 @@ body.hideScrollBar {
     justify-content: space-between;
     align-items: baseline;
     width: 95%;
-    color: #0BD375; /*var(--clr-primary);*/
+    color: var(--clr-lightGreen);
     z-index: 1;
     overflow: hidden;
 }
@@ -424,31 +410,31 @@ body.hideScrollBar {
     justify-content: center;
 }
 
-.slideshow-container {
+.mp-slideshow-container {
     position: relative;
     margin-top: 30px;
     width: 100%;
 }
   
 /* Hide the images by default */
-.mySlides {
+.mp-mySlides {
     display: none;
 }
 
-.mySlides img {
+.mp-mySlides img {
     width: 100%;    
     border-radius: 10px;
     object-fit: cover;
 }
   
 /* Next & previous buttons */
-.prev, .next {
+.mp-prev, .mp-next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
+    padding: 13px;
     color: var(--clr-secondary);
     font-weight: bold;
     font-size: 18px;
@@ -457,16 +443,23 @@ body.hideScrollBar {
     user-select: none;
 }
 
-.next {
+.mp-next {
     left: 0;
     border-radius: 3px 0 0 3px;
 }
   
-.prev:hover, .next:hover {
+.mp-prev:hover, .mp-next:hover {
     background-color: rgba(0,0,0,0.8);
 }
   
-.dot {
+.mp-dot-icon {
+    position: absolute; 
+    bottom: 0; 
+    text-align: center; 
+    left: 45%;
+}
+
+.mp-dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -477,7 +470,7 @@ body.hideScrollBar {
     transition: background-color 0.6s ease;
 }
   
-.btn-active, .dot:hover {
+.mp-btn-active, .mp-dot:hover {
     background-color: #717171;
 }
 
@@ -522,7 +515,7 @@ body.hideScrollBar {
     display: flex;
     text-align: center;
     border-color: var(--clr-secondary);
-    background-color: #0BD375; /*var(--clr-primary);*/
+    background-color: var(--clr-lightGreen);
     color: var(--clr-secondary);
     padding: 12px;
     margin: 40px;
@@ -775,7 +768,7 @@ body.hideScrollBar {
     }
 
     .mp-send_btn {
-        color: var(--clr--btnLink);
+        color: var(--clr-btnLink);
         background-color: var(--clr-secondary);
         max-width: 23%;
         margin-right: 10px;

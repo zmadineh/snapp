@@ -11,6 +11,16 @@
   --clr-tertiary1: #3f3f3f;
   --clr-cp-primary : #00e261;
   --clr-cp-title : #2a333d;
+  
+  --clr-btnLink : #00D16F;
+  --clr-inputClean : #A3A3A3;
+  --clr-lightGreen: #0BD375;
+  --clr-mainBorder: #e5e5e5;
+  --clr-bg: #F2F5F8;
+
+  --header-size-mv: 64px;
+  --header-size: 96px;
+
   --ff-title: IRANSans, sans-serif;
 }
 ul{
@@ -18,4 +28,5 @@ ul{
 }
 a{
   text-decoration: none;
+  cursor: pointer;
 }

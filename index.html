@@ -5,34 +5,240 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Snapp</title>
-
+    <title>سوپر اپلیکیشن اسنپ | سامانه هوشمند</title>
+    <link rel="icon" type="image/png" href="./src/img/main-page/snapp-pwa.svg"/>
     
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main-page.css">
+
+    <script src="https://kit.fontawesome.com/725bbcf365.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
 </head>
 
-<body>
-    <div class="header">
-        <div class="logo">
-            <img alt="Snapp logo" src="https://web-cdn.snapp.ir/snapp-website/icons/snappTextLogo.svg" width="90" height="32" loading="lazy">
+<body class="mp-font">
+    <div class="mp-overlay"></div>
+
+    <header class="mp-header mp-hf_padding">
+        <img alt="Snapp logo" src="./src/img/main-page/snappTextLogo.svg" width="90" height="32" loading="lazy">   
+        
+        <nav class="mp-top-nav">    
+            <div class="mp-menu">
+                <ul>
+                    <li><a href="./html/career-page.html">فرصت های شغلی</a></li>
+                    <li><a href="./html/blog.html">بلاگ</a></li>
+                    <li><a href="#">باشگاه رانندگان</a></li>
+                    <li class="mp-adding-item">
+                        <a href="#">ثبت نام راننده اسنپ</a>
+                        <a class="child-item" id="sighUp-child">(سواری، موتور، وانت)</a>
+                    </li>
+                    <li><a href="#">پنل سازمانی</a></li>
+                    <li><a href="./html/main-page.html">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+                
+                <span class="mp-seprator-line"></span>
+
+                <div class="mp-download-mv">
+
+                    <a class="mp-download-mv-title">
+                        <span>اپلیکیشن اسنپ</span>
+                        <i id="open-close-icon" class="fa-solid fa-angle-down"></i>
+                    </a>
+                
+                    <div class="mp-details-wrapper">
+                        <ul class="mp-accordion_menu" id="mp-dl_list">
+                            <li>
+                                <a><img src="./src/img/main-page/googleplay.png" /><span>دانلود از گوگل پلی</span></a>
+                            </li>
+                            <li>
+                                <a><img src="./src/img/main-page/cafebazaar.png" /><span>دانلود از کافه بازار</span></a>
+                            </li>
+                            <li>
+                                <a><img src="./src/img/main-page/snapp-pwa.svg" height="24px" width="24px"/><span>وب اپلیکیشن اسنپ (ios)</span></a>
+                            </li>
+                            <li>
+                                <a><img src="./src/img/main-page/sibapp.png" /><span>دانلود از سیب‌اپ</span></a>
+                            </li>
+                            <li>
+                                <a><img src="./src/img/main-page/iappsl.png" /><span>دانلود از آی‌اپس</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mp-hamburger">
+                <span class="mp-bar"></span>
+                <span class="mp-bar"></span>
+                <span class="mp-bar"></span>
+            </div>
+        </nav>
+    </header>  
+
+    <section class="mp-hero">
+        <div class="mp-hero_image"></div>
+        
+        <div class="mp-hero_text mp-r_padding">
+            <h1>تجربه‌ی زندگی راحت‌تر، سریع‌تر و به صرفه‌تر با سوپر‌اپلیکیشن اسنپ!</h1>
+            <p>از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید بلیط سفر، مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و... را میتوانید با سوپراپلیکیشن اسنپ انجام دهید.</p>
+            
+            <div class="mp-hero_input">
+                <form class="mp-hero_form">
+                    <div>
+                        <input id="mp-phone_input" placeholder="۰۹xxxxx۲۶۱۸" class="mp-phone_input" value=""/>
+                        <i id="mp-circle-icon" class="fa-solid fa-circle mp-circle_icon"></i>
+                        <i id="mp-clear-icon" class="fa-solid fa-circle-xmark mp-clear_icon" style="display: none;" onclick="clearInput()"></i>
+                    </div>
+                    <a id="mp-send_btn" class="mp-button mp-send_btn">ارسال لینک</a>
+                </form>
+                <span id="mp-error"> </span>
+            </div>
+
+            <a class="mp-button mp-download_btn">دانلود اپلیکیشن اسنپ</a>
+            <a class="mp-button mp-enter-web_btn">ورود به وب اپلیکیشن اسنپ</a>     
+        </div>
+    </section>
+
+    <section class="mp-center">
+        <div class="mp-container">
+            <div class="mp-download">
+                <a><img src="./src/img/main-page/google-play-badge.png" /></a>
+                <a><img src="./src/img/main-page/bazaar.png" /></a>
+                <a><img src="./src/img/main-page/snapp-pwa.png" /></a>
+                <a><img src="./src/img/main-page/sibapp-badge-white.png" /></a>
+                <a><img src="./src/img/main-page/iApps.png" /></a>
+            </div>
+        </div>
+    </section>
+      
+    <section class="mp-center mp-second-bg-clr relative_pos">
+        <div class="mp-container">
+            <div class="mp-possibilities">
+                <div class="mp-possibilities-header">یک اپلیکیشن، برای تمام نیازها</div>
+                <div class="mp-possibilities-list">  
+
+                    
+                </div>
+                <div class="mp-show-more">
+                    <div class="mp-button mp-more_btn">مشاهده همه</div>
+                </div>
+            </div>
             
         </div>
-        <div class="m-hamburger_menu t-hamburger_menu">
-           <a href="" class="nav" > <img alt="" src="https://web-cdn.snapp.ir/snapp-website/icons/menu_black_24dp.svg" size="24" class=" " loading="eager"></a>
+    </section>
+
+    <section class="mp-center">
+        <div class="mp-container">
+            <div class="mp-image-carousel">
+                <div class="mp-slideshow-container">
+
+                    <a class="mp-mySlides fade"><img src="./src/img/main-page/Food.jpg"></a>
+                    <a class="mp-mySlides fade"><img src="./src/img/main-page/Club.jpg"></a>
+                    <a class="mp-mySlides fade"><img src="./src/img/main-page/Driver.jpg"></a>
+                    <a class="mp-mySlides fade"><img src="./src/img/main-page/Market.jpg"></a>
+
+                    <a class="mp-prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="mp-next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="mp-dot-icon">
+                        <span class="mp-dot" onclick="currentSlide(1)"></span>
+                        <span class="mp-dot" onclick="currentSlide(2)"></span>
+                        <span class="mp-dot" onclick="currentSlide(3)"></span>
+                        <span class="mp-dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <section>
+        <div class="mp-superApp">
+            <div class="mp-superApp-img">
+                <img src="./src/img/main-page/super-app.jpg" />
+            </div>
+            <div class="mp-superApp-text-container">
+                <div class="mp-superApp-text">
+                    <h3>سوپر اپ اسنپ پاسخی به تمام نیازها</h3>
+                    <p>اسنپ، اولین تاکسی اینترنتی ایران، بعد از پنج سال فعالیت در حوزه تردد شهری ، به یک سوپر اپ با خدمات متنوع تبدیل شد.
+                        سوپر اپ اسنپ راه حلی جدید و ساده است که با استفاده از آن تنها با یک اپلیکیشن می توانید علاوه بر درخواست خودرو، موتور
+                        وانت از خدمات متعددی از جمله سفارش غذا، پزشک و مشاور آنلاین، خرید از سوپر مارکت ها و فروشگاه ها، اسباب کشی ، خرید بلیط (هواپیما، اتوبوس و قطار)،
+                        رزرو هتل، پرداخت قبض و خرید شارژ استفاده کنید.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mp-center">
+            <div class="mp-container">
+                <div class="mp-sbox-container">
+                    <div class="mp-superApp-item">
+                        <div  class="mp-item_img"><img src="./src/img/main-page/easy.png" /></div>
+                        <h3 class="mp-procText_h3">آسان</h3>
+                        <p class="mp-procText_para">برای استفاده از هر کدام از خدمات سوپراپ اسنپ کافی است وارد اپلیکیشن اسنپ شوید و روی آیکون مورد نظر بزنید.</p>
+                    </div>
+
+                    <div class="mp-superApp-item">
+                        <div class="mp-item_img"><img src="./src/img/main-page/fast.png" /></div>
+                        <h3 class="mp-procText_h3">سریع</h3>
+                        <p class="mp-procText_para">قرار گرفتن خدمات مختلف در بک  پلتفرم به صرفه‌جویی در زمان کمک می‌کند. سوپر اپ اسنپ پاسخی سریع به نیازهای روزمره شماست.</p>
             
+                    </div>
+
+                    <div class="mp-superApp-item">
+                        <div  class="mp-item_img"><img src="./src/img/main-page/eco.png" /></div>
+                        <h3 class="mp-procText_h3">به صرفه</h3>
+                        <p class="mp-procText_para">سوپراپ اسنپ علاوه بر زمان در هزینه های شما نیز صرفه‌جویی می‌کند تا بهترین خدمات را با قیمتی منطقی دریافت کنید.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu_list">
-                <a href="" class="d-menu-list">فرصت های شغلی</a>
-                <a href="" class="d-menu-list">بلاگ</a>
-                <a href="" class="d-menu-list">باشگاه رانندگان</a>
-                <a href="" class="d-menu-list">ثبت نام راننده اسنپ</a>
-                <a href="" class="d-menu-list">پنل سازمانی</a>
-                <a href="" class="d-menu-list">درباره ما</a>
-                <a href="" class="d-menu-list">تماس با ما</a>
+    </section>
+
+    
+    <section class="mp-center mp-second-bg-clr">
+        <div class="mp-container">
+            <div class="mp-signUp">
+                <h2>در کمتر از 10 دقیقه ثبت‌نام کنید و به ناوگان اسنپ بپیوندید.</h2>
+                <p>بدون نیاز به مراجعه‌ی حضوری، از طریق این صفحه، تمام مراحل ثبت‌نام را اینترنتی انجام دهید</p>
+
+                <a class="mp-button">ثبت نام رانندگان</a>
+                
+                <video controls>
+                    <source src="./src/video/jazb-ranande.mp4" typ="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="mp-signUp-benefit" id="mp-signUp-benefit"></div>
+            </div>
         </div>
-    </div>
+    </section>
+    
+    <footer>
+        <div class="AU__footer">
+            <ul class="AU__footer-list">
+                <li class="AU__footer-items">فرصت های شغلی</li>
+                <li class="AU__footer-items">بلاگ</li>
+                <li class="AU__footer-items">باشگاه رانندگان</li>
+    
+                <li class="AU__footer-items">ثبت نام راننده اسنپ</li>
+                <li class="AU__footer-items">پنل سازمانی</li>
+                <li class="AU__footer-items">درباره ما</li>
+                <li class="AU__footer-items">تماس با ما</li>
+            </ul>
+            <div class="AU__footer-icons">
+                <iconify-icon class="icon" icon="iconoir:twitter" width="30" height="30"></iconify-icon>
+                <iconify-icon class="icon" icon="ion:logo-instagram" width="30" height="30"></iconify-icon>
+                <iconify-icon class="icon" icon="simple-line-icons:social-youtube" width="30" height="30"></iconify-icon>
+                <iconify-icon class="icon" icon="iconoir:linkedin" width="30" height="30"></iconify-icon>
+                <iconify-icon class="icon" icon="uit:telegram-alt" width="30" height="30"></iconify-icon>
+            </div>
+        </div>
+    </footer>
+
     <!--Scrip js-->
-    <script src="./js/app.js"></script>
+     <script src="./js/main-page.js"></script> 
+
 </body>
 </html>
+ 
