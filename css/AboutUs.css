@@ -1,0 +1,593 @@
+a:visited {
+    color: unset;
+}
+
+.d-none{
+    display: none;
+}
+
+/* Start Header*/
+
+.AU__header {
+    direction: ltr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1200;
+    height: 64px;
+    min-height: 64px;
+    background-color: #fff;
+
+}
+
+.AU__header--menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    border-bottom: 1px solid rgb(223, 220, 220);
+    font-family:  IRANSans;
+}
+
+.AU__deskMenu {
+    display: none;
+}
+
+.AU__logo{
+    cursor: pointer;
+}
+
+@media only screen and (min-width : 840px) {
+    .AU__header {
+        direction: rtl;
+        display: flex block;
+        width: 100%;
+        padding: 15px 40px;
+        height: 68px;
+
+    }
+
+    .AU__header--menu {
+        border: none;
+        align-items: center;
+    }
+
+    .AU__deskMenu {
+        display: flex;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width : 1000px) {}
+
+@media only screen and (min-width : 1440px) {
+    .AU__header {
+        margin-right: 135px;
+    }
+}
+
+/*End Header*/
+
+
+/*Start deskMenu*/
+.AU__deskMenu {
+    display: none;
+}
+
+
+.AU__deskMenu--items {
+    font-family:  IRANSans;
+    list-style: none;
+    text-decoration: none;
+    margin: 13px 12px;
+}
+
+
+@media only screen and (min-width : 840px) {
+    .AU__deskMenu {
+        display: flex;
+    }
+
+    .AU__deskMenu--items {
+        list-style: none;
+        text-decoration: none;
+    }
+
+}
+
+@media only screen and (min-width : 1000px) {
+
+    .AU__deskMenu--items {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width : 1440px) {}
+
+
+/*end deskMenu*/
+
+
+/*Start burgerMenu*/
+.AU__burgerMenu {
+    direction: rtl;
+
+}
+
+.AU__burgerMenu--list {
+    list-style: none;
+}
+
+.AU__deskMenu__items {
+    height: 36PX;
+    padding: 0;
+    margin: 18px 5px;
+    cursor: pointer;
+    font-size: 19px;
+    box-sizing: border-box;
+    border-color: inherit;
+    text-decoration: none;
+
+}
+
+/*.AU__burgerMenu__items a{
+    width: fit-content;
+}
+*/
+
+.AU__burgerMenu--hidden {
+    display: none;
+}
+
+.AU__burgerMenu__toggle {
+    display: none;
+}
+
+.AU__burgerMenu__footer {
+    border-top: 1px solid rgb(223, 220, 220);
+    display: flex;
+    justify-content: space-between;
+}
+
+.AU__burgerMenu__footer::after {
+    content: "v";
+    color: green;
+    margin: 10px;
+}
+
+.AU__burgerMenu__footer--text {
+    height: 36PX;
+    padding: 0;
+    margin: 5px;
+    cursor: pointer;
+    color: green;
+    font-size: 15px;
+    font-family:  IRANSans;
+}
+
+
+@media only screen and (min-width : 840px) {
+    .AU__burger--logo {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width : 1000px) {}
+
+@media only screen and (min-width : 1440px) {}
+
+/*End burgerMenu*/
+
+
+
+/*Start hero*/
+.AU__hero {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.AU__hero--image {
+    background-image: url(../src/img/about-us-image/about-intro--mobile.jpg);
+    background-position: right center;
+    background-size: cover;
+    min-height: 49vh;
+}
+
+.AU__hero--description {
+    display: flex;
+    flex-direction: column;
+    background-color: #21aa58;
+    padding: 16px 24px;
+    line-height: 1.7;
+    font-family: IRANSans;
+
+}
+
+
+.AU__hero--description--heading {
+    font-size: 25px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    font-family: IRANSans;
+}
+
+
+.AU__hero--description--text {
+    font-size: 17.08px;
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-family:  IRANSans;
+}
+
+
+.AU__hero--btn {
+    font-size: 12.5px;
+    height: 48px;
+    min-height: 48px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 6px;
+    min-width: 430px;
+    background-color: #fff;
+    color: rgb(64, 64, 64);
+    padding: 8px;
+    cursor: pointer;
+    font-family:  IRANSans;
+
+}
+
+
+@media only screen and (min-width : 840px) {
+
+    .AU__hero {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+    .AU__hero--btn {
+        display: none;
+    }
+
+
+    .AU__hero--description {
+        width: 45%;
+        position: relative;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 24px;
+        padding-right: 85px;
+    }
+
+    .AU__hero--description--heading {
+        position: absolute;
+        top: 130px;
+        font-size: 35px;
+
+    }
+
+    .AU__hero--description--text {
+        position: absolute;
+        top: 250px;
+    }
+
+    .AU__hero--image {
+        background-image: url(../src/img/about-us-image/about-intro--mobile.jpg);
+        background-position: center;
+
+        /* background-size: cover;
+        min-height: 49vh;*/
+
+
+    }
+}
+
+@media only screen and (min-width : 1000px) {}
+
+@media only screen and (min-width : 1440px) {}
+
+
+/*End hero*/
+
+
+/*Start Main*/
+
+.AU__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 40px;
+    gap: 40px;
+}
+
+.AU__main--aus {
+    margin-top: 32px;
+    margin-bottom: 23px;
+    font-size: 22px;
+    text-align: right;
+    font-family:  IRANSans;
+
+}
+
+.AU__main--description {
+    font-size: 14.5px;
+    text-align: right;
+    margin: 0;
+    line-height: 1.7;
+    font-family:  IRANSans;
+    color: rgb(85, 84, 84);
+}
+
+.AU__main--active-cities {
+    color: #21aa58;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    font-family:  IRANSans;
+}
+
+.AU__main--map {
+    width: 85%;
+    max-width: 550px;
+    vertical-align: baseline;
+    direction: rtl;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.AU__main--makeeasier {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 16px;
+    margin-right: 16px;
+    text-align: center;
+    font-family:  IRANSans;
+}
+
+
+.AU__main--btn {
+    font-size: 16px;
+    font-family:  IRANSans;
+    font-weight: bold;
+    height: 48px;
+    width: 300px;
+    background-color: #00e261;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.AU__main--buttom--desk {
+    display: none;
+}
+
+
+@media only screen and (min-width : 840px) {
+    .AU__main--makeeasier {
+        display: none;
+    }
+
+    .AU__main--btn {
+        display: none;
+    }
+
+    .AU__main--buttom--desk {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 85px;
+        padding-right: 85px;
+        padding-bottom: 40px;
+        margin-top: 32px;
+
+    }
+
+    .AU__main--makeeasier--desk {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .AU__main--btn--desk {
+        width: 100px;
+        font-size: 17px;
+        font-weight: bold;
+        height: 44px;
+        background-color: #21aa58;
+        color: #fff;
+        border: none;
+        border-radius: 8%;
+        cursor: pointer;
+
+    }
+
+
+}
+
+@media only screen and (min-width : 1000px) {}
+
+@media only screen and (min-width : 1440px) {}
+
+
+
+
+/*End Main*/
+/*Start footer*/
+.AU__footer {
+    padding-top: 40px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.AU__footer-list {
+    white-space: nowrap;
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.AU__footer-items {
+    height: 32px;
+    min-height: 32px;
+    margin: 13px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-family:  IRANSans;
+
+}
+
+.AU__footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.icon {
+    cursor: pointer;
+
+}
+
+
+
+
+@media only screen and (min-width : 840px) {
+
+
+    .AU__footer {
+        border-top: 1px solid rgb(216, 214, 214);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+
+    .AU__footer-list {
+        flex-wrap: nowrap;
+
+    }
+
+
+    .AU__footer-items {
+        font-size: 16px;
+        letter-spacing: -.2px;
+        margin: 0;
+        margin-right: 15px;
+        justify-content: right;
+    }
+
+    .AU__footer-icons {
+        margin-left: 15px;
+    }
+
+}
+
+@media only screen and (min-width : 1000px) {}
+
+@media only screen and (min-width : 1440px) {}
+
+/*End footer*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.AU__body {
+    margin: 0%;
+}
+
+.AU__logo {
+    padding-left: 13px;
+}
+
+.AU__burger--logo {
+    padding-right: 13px;
+}
+
+/*.AU__main{
+    }
+    
+    .AU__main--picphone{
+        width:100%;
+        margin: 0%;
+    }
+    .AU__main--download{
+        background-color: #21aa58;
+        height: 300px;
+        position: relative;
+    }
+    .AU__main--describe--download{
+        color: white;
+        font-size: 30px;
+        line-height: 48px;
+        font-weight: 700;
+        padding: 8px;
+    }
+    .AU__main--describe--download2{
+        color: white;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 8px;
+    }
+    .AU__downloadbutton {
+        font-size: 14px;
+        font-weight: bold;
+        min-height: 48px;
+        height: 30px;
+        width: 400px;
+        color: rgb(64, 64, 64);
+        border: 1px solid rgb(255, 255, 255);
+        padding: 8px 8px;
+        border-radius: 6px;
+        background-color: rgb(255, 255, 255);
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+    }
+    */
