@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-    /* padding-top: 15px; */
 }
 .cp_container{
     display: flex;
@@ -62,7 +61,7 @@
         background-color: var(--clr-cp-primary);
         font-size: 14px;
         font-weight: 600;
-        color:#fff ;
+        color:white;
         margin-right: 20px;
     }
     .cp_botton i{
@@ -127,6 +126,8 @@
 
 /* end banner section */
 
+/* start aboutus section */
+
 .cp_aboutUs{
     display: flex;
     justify-content: center;
@@ -141,7 +142,7 @@
     text-align: center;
     font-family: cpFont;
     font-size: 35px;
-    color: #404b58;
+    color: var(--clr-cp-title);
     font-weight: 700;
     margin-top: 0;
 }
@@ -153,6 +154,10 @@
     text-align: justify;
     margin-top: 70px;
 }
+/* end aboutus section */
+
+
+/* start carousel section(styles of careousel box are in slick.css and slick-theme.css in slick folder) */
 .cp_photos{
     padding: 50px 0;
     border-bottom:1px solid #e6f0f6 ;
@@ -163,10 +168,15 @@
     text-align: center;
     font-family: cpFont;
     font-size: 35px;
-    color: #404b58;
+    color: var(--clr-cp-title);
     font-weight: 700;
     margin-bottom: 22px;
 }
+/* end carousel section */
+
+
+/* start career boxes section */
+
 .cp_careers{
     padding-top: 50px;
     display: flex;
@@ -204,8 +214,8 @@
     cursor: pointer;
 }
 .cp_careers .cp_selected{
-    color: #00e261;
-    border-bottom: 3px solid #00e261;
+    color: var(--clr-cp-primary);
+    border-bottom: 3px solid var(--clr-cp-primary);
     padding-bottom: 10px;
 }
 .cp_career-grid{
@@ -223,11 +233,11 @@
 }
 
 .cp_career-box:hover{
-    background-color: #00e261;
+    background-color: var(--clr-cp-primary);
 }
 
 .cp_career-box h5{
-    color: #2a333d;
+    color: var(--clr-cp-title);
     display:inline-block; /* for inline elements e.g. span, strong, em etc */
     width: calc(100%);
     font-size: 16px;
@@ -255,7 +265,7 @@
 
 .cp_career-department{
     padding: 4px 8px;
-    color: #00e261;
+    color: var(--clr-cp-primary);
     background: #e6f0f6;
     border-radius: 4px;
     font-family: cpfont;
@@ -275,7 +285,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 1.42857143;
-        color: #00e261;
+        color: var(--clr-cp-primary);
     }
     .cp_career-box:hover .cp_career-location{
         color: white;
@@ -287,11 +297,11 @@
         column-gap: 30px;
     }
 }
-@media only screen and (min-width: 1200px){
-    .cp_container{
-        width: 1170px;
-    }
-}
+
+
+/* end career boxes section */
+
+/* start end-banner section */
 
 .cp_EndBanner{
     background-image: url("https://career.snapp.ir/img/slider/slider1.jpg");
@@ -341,7 +351,7 @@
 }
 .cp_EndBanner li{
     font-family: cpfont;
-    color: #fff;
+    color: white;
     text-align: left;
     font-size: 16px;
     font-weight: 600;
@@ -350,7 +360,7 @@
 .cp_EndBanner li::before{
     content: '\f00c';
     font-family: FontAwesome;
-    color: #fff;
+    color: white;
     padding-right: 10px;
     font-size: 20px;
 }
@@ -375,3 +385,4 @@
         width: 1170px;
     }
 }
+/* end end-banner section */
