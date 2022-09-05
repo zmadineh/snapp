@@ -259,7 +259,7 @@
         flex-direction: row;
         width: 410px;
         background-color: #FFFFFF;
-        margin: 1% 4% 1%;
+        margin: 2% 4% ;
         height: 70px;
         border-radius: 15px;
         
@@ -542,6 +542,7 @@
         height:auto;
         border-radius: 20px;
         display: flex;
+        
         flex-direction: column;
         padding-bottom: 10px;
         
@@ -556,7 +557,7 @@
         flex-direction: row;
         width: 410px;
         background-color: #FFFFFF;
-        margin: 1% 4% 1%;
+        margin: 2% 4%;
         height: 70px;
         border-radius: 15px;
         
@@ -844,7 +845,7 @@
         flex-direction: row;
         
         background-color: #FFFFFF;
-        margin: 1% 4%;
+        margin: 2% 4%;
         height: 70px;
         border-radius: 15px;
     }
