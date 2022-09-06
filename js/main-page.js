@@ -4,7 +4,8 @@ const sighUpNewText = document.querySelector("#sighUp-child");
 const overlay = document.querySelector('.mp-overlay');
 const body = document.querySelector('body');
 
-const list = document.querySelector("#mp-dl_list");
+const wrapper = document.querySelector('.mp-details-wrapper');
+const list = document.querySelector(".mp-accordion_menu");
 const listButton = document.querySelector(".mp-download-mv-title");
 const listButtonIcone = document.querySelector("#open-close-icon");
 
@@ -41,6 +42,7 @@ function clearInput () {
         clearIcon.style.display = "none";
         errorText.textContent = '';
 }
+
 
 function create (img, title, body) {
         
@@ -104,19 +106,17 @@ function showSlides(n) {
         if (n < 1) slideIndex = slides.length;
         for (i = 0; i < slides.length; i++) 
                 slides[i].style.display = "none";
-        
+
         for (i = 0; i < dots.length; i++) 
                 dots[i].className = dots[i].className.replace(" btn-active", "");
-        
+
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " btn-active";
 } 
 
 
-      
 hamburger.addEventListener("click", () => {
-    handleHamburgerMneu();
-    
+    handleHamburgerMneu();    
 });
 
 overlay.addEventListener('click', () => {
@@ -127,7 +127,7 @@ overlay.addEventListener('click', () => {
 
 /* When the user clicks on the button,
 toggle between closing and opening the list content */
-listButton.addEventListener("click", () => {
+listButton.addEventListener("click", (e) => {
         list.classList.toggle('open');
         listButtonIcone.classList.toggle('fa-angle-down');
         listButtonIcone.classList.toggle('fa-angle-up');
@@ -158,11 +158,10 @@ sendBtn.addEventListener("click", () => {
 
 // main program 
 
-signUpProcContainer.appendChild(create("../src/img/income.png", "درآمد تضمینی + پاداش های ماهانه و هفتگی", "با فعالیت در ناوگان اسنپ، علاوه بر کسب درآمد مستمر و امکان تسویه در لحظه می‌توانید با شرکت در طرح‌های تشویقی مختلف، درآمد خود را افزایش دهید."));
-signUpProcContainer.appendChild(create("../src/img/hour.png", "ساعت کاری دلخواه", "فعالیت در ناوگان اسنپ محدودیت زمانی ندارد و می توانید فعالیت خود را در هر ساعت از شبانه روز و متناسب با برنامه زندگی تان شخصی ساز کنید."));
-signUpProcContainer.appendChild(create("../src/img/benefits.png", "مزایا و خدمات باشگاه رانندگان", "در باشگاه رانندگان اسنپ می‌توانید از تسهیلات و خدمات متنوعی از جمله خدمات خودرویی، خدمات درمانی و همچنین خدمات رفاهی و آموزشی بهره‌مند شوید."));
-signUpProcContainer.appendChild(create("../src/img/carfix.png", "کارفیکس", "باشگاه رانندگان اسنپ به‌تازگی سرویس جدید «اسنپ کارفیکس» را برای سهولت دسترسی کاربران راننده به انواع خدمات خودرویی راه‌اندازی کرده است."));
-
+signUpProcContainer.appendChild(create("../src/img/main-page/income.png", "درآمد تضمینی + پاداش های ماهانه و هفتگی", "با فعالیت در ناوگان اسنپ، علاوه بر کسب درآمد مستمر و امکان تسویه در لحظه می‌توانید با شرکت در طرح‌های تشویقی مختلف، درآمد خود را افزایش دهید."));
+signUpProcContainer.appendChild(create("../src/img/main-page/hour.png", "ساعت کاری دلخواه", "فعالیت در ناوگان اسنپ محدودیت زمانی ندارد و می توانید فعالیت خود را در هر ساعت از شبانه روز و متناسب با برنامه زندگی تان شخصی ساز کنید."));
+signUpProcContainer.appendChild(create("../src/img/main-page/benefits.png", "مزایا و خدمات باشگاه رانندگان", "در باشگاه رانندگان اسنپ می‌توانید از تسهیلات و خدمات متنوعی از جمله خدمات خودرویی، خدمات درمانی و همچنین خدمات رفاهی و آموزشی بهره‌مند شوید."));
+signUpProcContainer.appendChild(create("../src/img/main-page/carfix.png", "کارفیکس", "باشگاه رانندگان اسنپ به‌تازگی سرویس جدید «اسنپ کارفیکس» را برای سهولت دسترسی کاربران راننده به انواع خدمات خودرویی راه‌اندازی کرده است."));
 
 let slideIndex = 1;
 showSlides(slideIndex);

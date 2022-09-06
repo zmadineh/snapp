@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css" integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe" crossorigin="anonymous">
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.rtlcss.com/bootstrap/v4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-40ix5a3dj6/qaC7tfz0Yr+p9fqWLzzAXiwxVLt9dw7UjQzGYw6rWRhFAnRapuQyK" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css" integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe" crossorigin="anonymous"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.rtlcss.com/bootstrap/v4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-40ix5a3dj6/qaC7tfz0Yr+p9fqWLzzAXiwxVLt9dw7UjQzGYw6rWRhFAnRapuQyK" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/blog.css">
     <script src="https://kit.fontawesome.com/25bd35cffd.js" crossorigin="anonymous"></script>
-    <script src="../js/blog.js"></script>
+    
 </head>
 <body>
     <div class="bl-container">
@@ -23,7 +21,8 @@
                 <a><img alt="Snapp logo" src="https://web-cdn.snapp.ir/snapp-website/icons/snappTextLogo.svg" width="90" height="32" loading="lazy"></a>
 
             </div>
-            <a href="" ><div class="bl-menu">اخبار
+            <div id="bl-menu-father" class="bl-menu-father">
+            <a href="" ><div class="bl-menu" onclick="return false;bl_submenu_Function()">اخبار
                 <ul class="bl-submenu">
                     <li class="bl-submenu-li"><a href="">آموزشی</a></li>
                     <li class="bl-submenu-li"><a href="">امنیت</a><li>
@@ -65,20 +64,23 @@
             <a href=""><div class="bl-menu">ایستگاه اسباب کشی
                 
             </div></a>
-            
+        </div>
+            <div class="bl-header-icons">
             <div class="bl-search-input">
-                <input id="bl-searc-input" type="search" placeholder="جستجو...">
+                <input id="bl-search-input" type="search" placeholder="جستجو...">
              </div>
              <div class="bl-search-icon" onclick="bl_search_Function()">
-                <a href="" onclick="bl_search_Function()"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <i class="fa-solid fa-magnifying-glass"></i>
              </div>
-             <div class="bl-bar-icon">
-                <a href=""><i class="fa-solid fa-bars"></i></a>
+             <div class="bl-bar-icon" onclick="bl_hamburger_Function()">
+                <i class="fa-solid fa-bars"></i>
              </div>
+            </div>
         </div>
         <div class="bl-banner">
             
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <a href=""></a>
+            <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -118,7 +120,7 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div>
+              </div> -->
         </div>
         <div class="bl-cards">
             <div class="bl-card">
@@ -198,14 +200,17 @@
         </div>
         <div class="bl-news-container">
             <div class="bl-news-column">
-                <div class="bl-news-header">اخبار</div>
-                <div class="bl-news-box">
+                <div class="bl-news-header">مسئولیت اجتماعی
+                </div>
+                <div class="bl-news-rows">
+                    <div class="bl-news-box">
                     
                         <div class="bl-news-box-img">
-                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/Blog-1-1050x445.jpg" alt="">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/Blog-1-85x85.jpg" alt="">
                         </div>
                         <div class="bl-news-box-txt"><a href="">
-                            <p>۸ شهریور, ۱۴۰۱
+                            <p>۱۵ مرداد, ۱۴۰۱
+
                             </p>
                             <h6>اغاز به کار اسنپ در مریوان</h6>
                             </a>
@@ -215,10 +220,11 @@
                 <div class="bl-news-box">
                     
                         <div class="bl-news-box-img">
-                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/Blog-1-1050x445.jpg" alt="">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/Blog-1-85x85.jpg" alt="">
                         </div>
                         <div class="bl-news-box-txt"><a href="">
-                            <p>۱ مرداد, ۱۴۰۱
+                            <p>۱۲ مرداد, ۱۴۰۱
+
 
                             </p>
                             <h6>آغاز فعالیت اسنپ در بم</h6>
@@ -226,20 +232,291 @@
                         </div>
                     
                 </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/07/WhatsApp-Image-2022-07-13-at-6.17.07-PM-85x85.webp" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۱۰ مرداد, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>چالش ها فرصت ها و مسیر توسعه اسنپ</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/07/Blog-2-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۸ مرداد, ۱۴۰۱
+
+
+                            </p>
+                            <h6>آغاز به کار انسپ در شیروان و تالش</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/07/Blog-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲۴ خرداد, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>آغاز به کار اسنپ در فیروز آباد - سرپل ذهاب </h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/06/Snapp-psychology1050x445-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲۴ خرداد, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>آزمون ارزیابی عملکرد رانندگان اسنپ</h6>
+                            </a>
+                        </div>
+                    
+                </div>
                 
+                </div>
             </div>
             <div class="bl-news-column">
                 <div class="bl-news-header">آموزش</div>
                 <div class="bl-news-rows">
+                    <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2019/10/invite-to-win-free-ride-1-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲ شهریور, ۱۴۰۱
+
+                            </p>
+                            <h6>اغاز به کار اسنپ در مریوان</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/MG_9555-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۹ مرداد, ۱۴۰۱
+
+
+                            </p>
+                            <h6>آغاز فعالیت اسنپ در بم</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/07/Blog-Application-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲۸ تیر, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>چالش ها فرصت ها و مسیر توسعه اسنپ</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/07/Blog-1-85x85.webp" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲۰ تیر, ۱۴۰۱
+
+                            </p>
+                            <h6>آغاز به کار انسپ در شیروان و تالش</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2021/11/Header-Blog-points-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۳ تیر, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>آغاز به کار اسنپ در فیروز آباد - سرپل ذهاب </h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/06/Blog-cover-lost-1050x467large-1-85x85.jpeg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲۳ خرداد, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>آزمون ارزیابی عملکرد رانندگان اسنپ</h6>
+                            </a>
+                        </div>
+                    
+                </div>
 
                 </div>
             </div>
             <div class="bl-news-column">
-                <div class="bl-news-header">مسئولیت اجتماعی
+                <div class="bl-news-header">اخبار
                 </div>
                 <div class="bl-news-rows">
+                    <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/1050x445-1-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۱۵ مرداد, ۱۴۰۱
 
+                            </p>
+                            <h6>اغاز به کار اسنپ در مریوان</h6>
+                            </a>
+                        </div>
+                    
                 </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/HEADER-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۱۲ مرداد, ۱۴۰۱
+
+
+                            </p>
+                            <h6>آغاز فعالیت اسنپ در بم</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/08/blog-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۱۰ مرداد, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>چالش ها فرصت ها و مسیر توسعه اسنپ</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/07/%D8%A8%D9%84%D8%A7%DA%AF-%D8%B3%DB%8C%D9%84-%DB%8C%D8%B2%D8%AF-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۸ مرداد, ۱۴۰۱
+
+
+                            </p>
+                            <h6>آغاز به کار انسپ در شیروان و تالش</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/07/%D8%B9%DA%A9%D8%B3-%D9%86%DB%8C%DA%A9%D8%A7%D9%86-%D9%85%D8%A7%D9%85%D9%88%D8%AA-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲۴ خرداد, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>آغاز به کار اسنپ در فیروز آباد - سرپل ذهاب </h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                <div class="bl-news-box">
+                    
+                        <div class="bl-news-box-img">
+                            <img src="https://snapp.ir/blog/wp-content/uploads/2022/06/blog-1-85x85.jpg" alt="">
+                        </div>
+                        <div class="bl-news-box-txt"><a href="">
+                            <p>۲۴ خرداد, ۱۴۰۱
+
+
+
+                            </p>
+                            <h6>آزمون ارزیابی عملکرد رانندگان اسنپ</h6>
+                            </a>
+                        </div>
+                    
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        <div class="bl-footer">
+            <div class="bl-footer-txt">
+            <a>فرصت های شغلی</a>
+            <a>بلاگ</a>
+            <a>باشگاه رانندگان</a>
+            <a>ثبت نام راننده اسنپ</a>
+            <a>پنل سازمانی</a>
+            <a>درباره ما</a>
+            <a>تماس با ما</a>
+            </div>
+           
+            <div class="bl-footer-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M25.6 12.5c0 8.4-4.8 14.4-13.2 14.4-4.8 0-6.7-2.5-8.4-4.8m0 0l3.6-1.2c-4-4-4.3-10-1.2-14.4 1.5 2.7 4.2 5.2 7.2 6 .1-3.5 2.5-6 6-6 2.4 0 3.8.9 4.8 2.4H28l-2.4 3.6"></path><path d="M0 32V0h32v32z"></path></g></svg>
+            
+                <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 4h12a6 6 0 016 6v12a6 6 0 01-6 6H10a6 6 0 01-6-6V10a6 6 0 016-6h0z"></path><path stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M22.6 9c-.2 0-.5.2-.5.4a.5.5 0 10.5-.4M19.4 12.6a4.8 4.8 0 11-6.8 6.8 4.8 4.8 0 016.8-6.8"></path><path d="M0 32V0h32v32z"></path></g></svg>
+
+
+           
+                <i class="icon-0-2-108 icon-d3-0-2-112 " aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 4h12a6 6 0 016 6v12a6 6 0 01-6 6H10a6 6 0 01-6-6V10a6 6 0 016-6h0zM10.8 14.8V22"></path><g stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M15.6 22v-4.2a3 3 0 013-3h0a3 3 0 013 3V22M10.8 10.5c-.1 0-.3 0-.3.3a.3.3 0 10.3-.3"></path></g><path d="M0 32V0h32v32z"></path></g></svg></i>
+
+            
+                <i class="icon-0-2-108 icon-d4-0-2-113 " aria-hidden="true"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g stroke="#323232" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M15.7 22.5L13 25.2a.9.9 0 01-1.5-.4l-1.8-6"></path><path d="M18.8 14.6l-5.2 4.7c-.5.5-.5 1.3 0 1.7l7.2 5.3c.7.5 1.8.2 2-.7L26.2 9a1 1 0 00-1.4-1.2l-20.7 8a.7.7 0 000 1.3l5.5 1.7"></path></g><path d="M0 32V0h32v32z"></path></g></svg></i>
             </div>
         </div>
     </div>

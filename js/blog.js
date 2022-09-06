@@ -1,5 +1,5 @@
 function bl_search_Function() {
-    var x = document.getElementById("bl-search-input");
+    const x = document.getElementById("bl-search-input");
     if (x.style.display === "block") {
       x.style.display = "none";
     } else {
@@ -7,3 +7,13 @@ function bl_search_Function() {
     }
     
   }
+function bl_hamburger_Function(){
+  const x = document.getElementById("bl-menu-father");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+    
+}
+
