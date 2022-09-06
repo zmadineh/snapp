@@ -197,6 +197,93 @@ body.hideScrollBar {
 }
 /* end hero */
 
+/* start possibilities section */
+
+.mp-show-more {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(0, 212, 255, 0) 100%);
+}
+
+.mp-more_btn {
+    color: var(--clr--btnLink);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.mp-possibilities-logo {
+    margin: 0;
+    padding: 0;
+}
+
+.mp-possibilities-image {
+    width: 48px;
+    height: 48px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.mp-logotype {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-family: IRANSans;
+    font-weight: bold;
+    color: #404040;
+}
+
+.mp-possibilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.mp-possibilities-header {
+    color: #404040;
+    font-size: 18px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: bold;
+    text-align: center;
+    font-family: IRANSans;
+}
+
+.mp-possibilities-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    transition: max-height 0.25s ease-in 0s;
+}
+
+.mp-possibilities-items {
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 8px;
+    margin: 16px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 24%;
+    cursor: pointer;
+}
+
+.mp-logo-moretype {
+    display: none;
+}
+/* end possibilities section */
+
 /* start download section */
 .mp-download {
     display: none;
@@ -481,6 +568,52 @@ body.hideScrollBar {
 }
 /* end sign up section */
 
+/* start footer*/
+.AU__footer {
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--clr-mainBorder);
+}
+
+.AU__footer-list {
+    white-space: nowrap;
+    list-style: none;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.7;
+    font-weight: lighter;
+}
+
+.AU__footer-items {
+    height: 32px;
+    min-height: 32px;
+    margin: 13px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: lighter;
+    cursor: pointer;
+    font-family: IRANSans;
+    color: #404040;
+}
+
+.AU__footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 32px;
+}
+
+.icon {
+    cursor: pointer;
+}
+/* end footer */
 
 @media only screen and (min-width: 600px) {
     .mp-container {
@@ -687,6 +820,40 @@ body.hideScrollBar {
     }
     /* end download section */
 
+    /* start possibilities section */
+    .mp-logo-describes {
+        padding-bottom: 25px;
+    }
+
+    .mp-possibilities-items {
+        border-radius: 18px;
+    }
+
+    .mp-possibilities-header {
+        font-size: 36px;
+        line-height: 52px;
+        font-weight: 700;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .mp-logo-moretype {
+        display: flex;
+        color: rgb(179, 176, 176);
+        font-size: 11.5px;
+        text-align: center;
+    }
+
+    .mp-possibilities {
+        height: 100%;
+        overflow:auto;
+    }
+
+    .mp-show-more {
+        display: none;
+    }
+    /* end possibilities section */
+
     /* start super app section */
     .mp-superApp-item {
         width: 33%;
@@ -709,6 +876,36 @@ body.hideScrollBar {
         margin-bottom: 20px;
     }
     /* end sign up section */
+
+    /* start footer */
+    .AU__footer {
+        border-top: 1px solid rgb(216, 214, 214);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 23px 35px;
+    }
+
+    .AU__footer-list {
+        flex-wrap: nowrap;
+    }
+
+    .AU__footer-items {
+        color: #404040;
+        font-size: 13px;
+        letter-spacing: -.2px;
+        margin: 16;
+        justify-content: right;
+        display: inline-block;
+    }
+
+    .AU__footer-icons {
+        margin-left: 15px;
+        padding-top: 15px;
+    }
+    /* end footer */
 }
 
 @media only screen and (min-width: 1001px){
@@ -719,6 +916,51 @@ body.hideScrollBar {
     .mp-hf_padding {
         padding: 0 5%;
     }
+
+    
+    /* start possibilities section */
+    .mp-possibilities-items {
+        direction: rtl;
+        display: flex;
+        flex-direction: row;
+        border-radius: 18px;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        max-width: 321px;
+        margin: 16px;
+    }
+
+    .mp-logotype {
+        text-align: right;
+        font-size: 14px;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .mp-logo-moretype {
+        text-align: right;
+        line-height: 1.7;
+        font-size: 12px;
+    }
+
+    .mp-possibilities-image {
+        width: 62px;
+        height: 62px;
+    }
+
+    .mp-possibilities-logo {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .mp-logo-describes {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+    /* end possibilities section */
 
     /* start super app section */
     .mp-superApp {
@@ -768,6 +1010,16 @@ body.hideScrollBar {
         margin-bottom: 20px;
     }
     /*end sing up section */
+
+    /* start footer */
+    .AU__footer {
+        justify-content: space-around;
+    }
+
+    .AU__footer-items {
+        font-size: 14px;
+    }
+    /* end footer */
 }
 
 @media only screen and (min-width: 1390px){
@@ -788,5 +1040,33 @@ body.hideScrollBar {
         width: 35%;
     }
     
-    
+    /* start possibilities section */
+    .mp-possibilities-items {
+        width: 29%;
+        max-width: 321px;
+        border-radius: 25px;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .mp-logo-describes {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+    /* end possibilities section */
+
+    /* start footer */
+    .AU__footer-items {
+        font-size: 14px;
+    }
+
+    .AU__footer-icons {
+        margin-left: 140px;
+    }
+
+    .AU__footer-list {
+        margin-right: 140px;
+    }
+    /* end footer */
 }
